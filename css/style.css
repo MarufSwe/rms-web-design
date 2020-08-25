@@ -122,10 +122,10 @@ body{
     margin: 5px 0px;
 }
 /* for data table */
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+/* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
   width: 100%;
   padding-right: 15px;
   padding-left: 105px !important;
   margin-right: auto;
   margin-left: auto;
-}
+} */
