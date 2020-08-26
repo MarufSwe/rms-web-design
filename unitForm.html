@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <title>RMS</title>
 
@@ -11,6 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <!-- jqury min .css -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <!-- select2 jsCDN -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <title>Client </title>
 </head>
 
 <body>
@@ -143,47 +157,116 @@
         </div>
         <!--Modal: Login with Avatar Form-->
 
+        <div class="layout">
+            <div id="sidebar">
+                <div class="toggle-btn" onclick="toggleSidebar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li>
+                        <a href="clientForm.html">Client Management</a>
+                    </li>
+                    <li>
+                        <a href="departmentForm.html">Department Management</a>
+                    </li>
+                    <li> <a href="teamForm.html">Team Management</a>
+                    </li>
+                    <li><a href="unitForm.html">Unit Management</a></li>
+                    <li><a href="itemForm.html">Requisition item  Management</a></li>
 
-        <div id="sidebar">
-            <div class="toggle-btn" onclick="toggleSidebar()">
-                <span></span>
-                <span></span>
-                <span></span>
+                    <li>Project Management</li>
+                    <li>Site Management</li>
+                    <li>Requisition Management</li>
+
+                </ul>
             </div>
-            <ul>
-                <li>Client Management</li>
-                <li>Department Management</li>
-                <li>Team Management</li>
-                <li>Unit Management</li>
-                <li>Requisitions Item Management</li>
-                <li>Project Management</li>
-                <li>Site Management</li>
-                <li>Requisition Management</li>
 
-                <li>
-                    <a href="clientForm.html">Client Management</a>
-                </li>
-                <li>
-                    <a href="departmentForm.html">Department Management</a>
-                </li>
-                <li> <a href="teamForm.html">Team Management</a>
-                </li>
-                <li><a href="unitForm.html">Unit Management</a></li>
-                <li><a href="itemForm.html">Requisition item  Management</a></li>
-            </ul>
+            <div class="layout_content">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="accordionform">
+                                <div class="accordion" id="accordionExample">
+                                    <!-- Unit Form -->
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn btn text btn-success float-right" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        Add Unit
+                                      </button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseFour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="exampleFormControlSelect1">Unit Type</label>
+                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                          <option selected>Kg</option>
+                                                          <option>Liter </option>
+                                                          <option>gm</option>
+                                                         
+                                                        </select>
+                                                        </div>
+
+
+                                                        <div class="form-group col-md-6">
+                                                            <label for="exampleFormControlSelect1">Status</label>
+                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                          <option selected>Active</option>
+                                                          <option>Enable </option>
+                                                          <option>Disable</option>
+                                                         
+                                                        </select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
-<!--Bootstrap CDN-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-  
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                $('.js-example-basic-multiple').select2();
+            });
+        </script>
+</body>
+
+</html>
 </body>
 
 </html>
