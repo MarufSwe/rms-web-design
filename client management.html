@@ -157,52 +157,164 @@
         <!--Modal: Login with Avatar Form-->
 
 
-        <div id="sidebar">
-            <div class="toggle-btn" onclick="toggleSidebar()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Client Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Department Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Team Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Unit Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Requisitions Item Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Project Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Site Management </a>
-                </li>
-                <li>
-                    <a href="client management.html" style="text-decoration: none;"> Requisition Management </a>
-                </li>
+<div id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul>
+        <li>
+            <a href="client management.html" style="text-decoration: none;"> Client Management </a>
+        </li>
+        <li>
+            <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
+        </li>
+        <li>
+            <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
+        </li>
+        <li>
+            <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
+        </li>
+        <li>
+            <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item Management </a>
+        </li>
+        <li>
 
+            <a href="#" style="text-decoration: none;"> Project Management </a>
+
+            <ul> Project Management
+                <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
+                <li>View All Projrct</li>
             </ul>
-        </div>
-        <!-- client management page -->
-        <div>
-            <h1 class="text-center">Client management</h1>
-            <div class="row d-flex justify-content-center modalWrapper">
-                <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header text-center">
-                                <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">
-                                    Edit Your Form
-                                </h4>
-                                <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+
+        </li>
+        <li>
+            <a href="#" style="text-decoration: none;"> Site Management </a>
+        </li>
+        <li>
+            <a href="#" style="text-decoration: none;"> Requisition Management </a>
+        </li>
+
+    </ul>
+</div>
+
+<!--Sayket Client add code Start-->
+ <h1 class="text-center">Client management</h1>
+ <div class="layout_content" style="margin-bottom: 20px">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="accordionform">
+                                <div class="accordion" id="accordionExample">
+                                    <!-- CM form -->
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn btn text btn-success float-right" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Add Client
+                                      </button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <form>
+
+
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-4">
+                                                            <label for="exampleInputEmail1"> Client Name</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="exampleInputEmail1"> Address</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="exampleInputEmail1">Contact Info</label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+
+
+
+
+                                                    </div>
+
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-4">
+                                                            <label for="exampleInputEmail1">Emial address</label>
+                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+
+                                                        <div class="form-group col-md-4">
+                                                            <label for="exampleInputEmail1">Phone no </label>
+                                                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="exampleFormControlSelect1">Status</label>
+                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                          <option selected>Active</option>
+                                                          <option>Enable </option>
+                                                          <option>Disable</option>
+
+                                                        </select>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <button type="submit" class="btn btn-primary float-left">Submit</button>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--Sayket Client add code End-->
+
+
+
+<!-- Farhana apu, client management page -->
+<div>
+    <div class="row d-flex justify-content-center modalWrapper">
+        <div
+                class="modal fade addNewInputs"
+                id="modalAdd"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="modalAdd"
+                aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">
+                            Edit Your Form
+                        </h4>
+                        <button
+                                type="button"
+                                class="close text-primary"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                        >
+
                             <span aria-hidden="true">&times;</span>
                         </button>
                             </div>
