@@ -17,7 +17,9 @@
 /*}*/
 
 .navbar {
-    background: palevioletred;
+
+  width: 100%;
+  background: palevioletred;
 }
 
 .navbar ul li {
@@ -96,7 +98,7 @@
 }
 
 
-/* card style by sayket */
+/* card style by sayket*/
 
 .scroll {
     max-height: 200px;
