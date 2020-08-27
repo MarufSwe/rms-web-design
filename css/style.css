@@ -102,3 +102,22 @@
     overflow-y: auto;
     margin-bottom: 50px;
 }
+
+.scrollcard {
+    margin-bottom: 50px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 1em;
+}
+
+.scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(2, 117, 216);
+    outline: 1px solid slategrey;
+    border-radius: 10px;
+}
