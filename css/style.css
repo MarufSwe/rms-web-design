@@ -17,7 +17,9 @@
 /*}*/
 
 .navbar {
-    background: palevioletred;
+
+  width: 100%;
+  background: palevioletred;
 }
 
 .navbar ul li {
@@ -81,7 +83,6 @@
 
 /* for data table */
 
-
 .container,
 .container-fluid,
 .container-lg,
@@ -96,7 +97,7 @@
 }
 
 
-/* card style by sayket */
+/* card style by sayket*/
 
 .scroll {
     max-height: 200px;
@@ -123,24 +124,37 @@
     border-radius: 10px;
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 125px !important;
-  /*margin-right: auto;*/
-  /*margin-left: auto;*/
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 125px !important;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
 }
-/* for form */
-.body {
-	padding-left: 20px;
-	background-color: #e1f5fe;
-}
-/* Scroll to Top */
-#scroll-to-top {
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  /* display: none; */
 
+
+/* for form */
+
+.body {
+    padding-left: 20px;
+    background-color: #e1f5fe;
 }
+
+
+/* Scroll to Top */
+
+#scroll-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* display: none; */
+}
+
+
+/* card style by sayket  for Site */
