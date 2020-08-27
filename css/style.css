@@ -1,29 +1,35 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
 
+
 /*.navbar{*/
+
+
 /*    width: 100%;*/
+
+
 /*    float: right;*/
+
+
 /*}*/
 
-
-.navbar{
+.navbar {
     background: palevioletred;
 }
 
-.navbar ul li{
+.navbar ul li {
     display: inline-block;
 }
 
-.nav-item img{
-    width:40px;
+.nav-item img {
+    width: 40px;
     border-radius: 50%;
 }
 
-#sidebar{
+#sidebar {
     position: fixed;
     width: 200px;
     height: 100%;
@@ -32,11 +38,11 @@
     transition: all 500ms linear;
 }
 
-#sidebar.active{
+#sidebar.active {
     left: 0px;
 }
 
-#sidebar ul li{
+#sidebar ul li {
     color: rgba(230, 230, 230, 0.9);
     list-style: none;
     padding: 15px 10px;
@@ -45,33 +51,78 @@
 }
 
 #sidebar ul li:hover {
-  background-color: yellow;
-  color: green;
+    background-color: yellow;
+    color: green;
 }
 
-#sidebar a{
+#sidebar a {
     color: whitesmoke;
 }
-#sidebar ul li a:hover{
-  background-color: yellow;
-  color: black;
+
+#sidebar ul li a:hover {
+    background-color: yellow;
+    color: black;
 }
 
-
-#sidebar .toggle-btn{
+#sidebar .toggle-btn {
     position: absolute;
     left: 230px;
     top: 20px;
 }
 
-#sidebar .toggle-btn span{
+#sidebar .toggle-btn span {
     display: block;
     width: 30px;
     height: 3px;
     background: #151719;
     margin: 5px 0px;
 }
+
+
 /* for data table */
+
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 125px !important;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+}
+
+
+/* card style by sayket */
+
+.scroll {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+
+.scrollcard {
+    margin-bottom: 50px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 1em;
+}
+
+.scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(2, 117, 216);
+    outline: 1px solid slategrey;
+    border-radius: 10px;
+}
+
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
   width: 100%;
   padding-right: 15px;
@@ -91,4 +142,5 @@
   bottom: 20px;
   right: 20px;
   /* display: none; */
+
 }
