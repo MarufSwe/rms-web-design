@@ -10,8 +10,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" integrity="sha256-SMGbWcp5wJOVXYlZJyAXqoVWaE/vgFA5xfrH3i/jVw0=" crossorigin="anonymous" />
@@ -21,153 +20,142 @@
 <body>
 
 
-<div class="navbar" style="display: flex; justify-content: flex-end">
-    <ul>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-bell" data-toggle="modal" data-target="#myModal"
-                   style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
-            </a>
+    <div class="navbar" style="display: flex; justify-content: flex-end">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-bell" data-toggle="modal" data-target="#myModal" style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
+                </a>
 
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Notifications</h5>
-                            <button class="close" data-dismiss="modal">&times;</button>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Notifications</h5>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
                         </div>
-
                     </div>
                 </div>
-            </div>
-        </li>
+            </li>
 
-        <li class="nav-item">
-            <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-<!--Notification Modal-->
+            <li class="nav-item">
+                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
 
 
-<!--Modal-->
-<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-        <!--Content-->
-        <div class="modal-content">
+    <!--Notification Modal-->
 
-            <!--Header-->
-            <div class="modal-header">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar"
-                     class="rounded-circle img-responsive">
-                <button class="close" data-dismiss="modal">
+
+    <!--Modal-->
+    <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+                    <button class="close" data-dismiss="modal">
                     <i class="fas fa-times" style="font-size: 15px;"></i></button>
-            </div>
-            <!--Body-->
+                </div>
+                <!--Body-->
 
-            <div class="modal-body text-center mb-1">
-                <h3 style="color: palevioletred">Farhana Afreen</h3>
-                <hr>
-                <div class="md-form ml-0 mr-0">
-                    <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i> Profile
+                <div class="modal-body text-center mb-1">
+                    <h3 style="color: palevioletred">Farhana Afreen</h3>
+                    <hr>
+                    <div class="md-form ml-0 mr-0">
+                        <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i> Profile
                     </button>
-                </div>
-                <hr>
-                <div class="text-center mt-1">
-                    <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
+                    </div>
+                    <hr>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
                     </button>
-                </div>
-                <hr>
-                <div class="text-center mt-1">
-                    <button class="btn btn-cyan mt-1"><i class="fas fa-power-off" style="margin-right: 5px"></i>Log Out
+                    </div>
+                    <hr>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-cyan mt-1"><i class="fas fa-power-off" style="margin-right: 5px"></i>Log Out
                     </button>
-                </div>
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!--Modal: Login with Avatar Form-->
+    <!--Modal: Login with Avatar Form-->
 
 
-<div id="sidebar">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <ul>
+            <li>
+                <a href="client management.html" style="text-decoration: none;"> Client Management </a>
+            </li>
+            <li>
+                <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
+            </li>
+            <li>
+                <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
+            </li>
+            <li>
+                <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
+            </li>
+            <li>
+                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
+                Management </a>
+            </li>
+            <li>
+                <ul> Project Management
+                    <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
+                    <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" style="text-decoration: none;"> Site Management </a>
+            </li>
+            <li>
+                <a href="#" style="text-decoration: none;"> Requisition Management </a>
+            </li>
+
+        </ul>
     </div>
 
 
-    <ul>
-        <li>
-            <a href="client management.html" style="text-decoration: none;"> Client Management </a>
-        </li>
-        <li>
-            <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
-        </li>
-        <li>
-            <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
-        </li>
-        <li>
-            <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
-        </li>
-        <li>
-            <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
-                Management </a>
-        </li>
-        <li>
-            <ul> Project Management
-                <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
-                <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" style="text-decoration: none;"> Site Management </a>
-        </li>
-        <li>
-            <a href="#" style="text-decoration: none;"> Requisition Management </a>
-        </li>
+    <!--Edit button Modal Start-->
 
-    </ul>
-</div>
+    <div class="row d-flex justify-content-center modalWrapper">
+        <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd" aria-hidden="true">
 
+            <div class="row justify-content-center ">
+                <div class="col-md-8 ">
+                    <span class="anchor" id="formLogin"></span>
+                    <!-- form card login -->
+                    <div class="card card-outline-secondary shadow-lg">
+                        <h1 class="text-center mb-3" style="padding: 20px">Edit Project</h1>
+                        <hr>
 
-<!--Edit button Modal Start-->
-
-<div class="row d-flex justify-content-center modalWrapper">
-    <div
-            class="modal fade addNewInputs"
-            id="modalAdd"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="modalAdd"
-            aria-hidden="true">
-
-        <div class="row justify-content-center ">
-            <div class="col-md-8 ">
-                <span class="anchor" id="formLogin"></span>
-                <!-- form card login -->
-                <div class="card card-outline-secondary shadow-lg">
-                    <h1 class="text-center mb-3" style="padding: 20px">Edit Project</h1>
-                    <hr>
-
-<!--                    <div class="card-body body">-->
-<!--                        <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">-->
-                    <div class="container">
+                        <!--                    <div class="card-body body">-->
+                        <!--                        <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">-->
+                        <div class="container">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input class="form-control" id="name" name="name" required="" type="text"
-                                       style="width: 50%">
+                                <input class="form-control" id="name" name="name" required="" type="text" style="width: 50%">
                             </div>
                             <div class="form-group">
                                 <label>Project ID</label>
-                                <input class="form-control" id="PI" name="gender" required="" type="number"
-                                       style="width: 50%">
+                                <input class="form-control" id="PI" name="gender" required="" type="number" style="width: 50%">
                             </div>
                             <div class="form-group">
                                 <label>Requisition Status</label> <br>
@@ -178,8 +166,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Assigned Client</label> <br>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                        style="width: 50%">
+                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
                                     <option value="A">Client A</option>
                                     <option value="B">Client B</option>
                                     <option value="W">Client C</option>
@@ -188,8 +175,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Assigned Department</label> <br>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                        style="width: 50%">
+                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
                                     <option value="A">Department A</option>
                                     <option value="B">Department B</option>
                                     <option value="W">Department C</option>
@@ -199,8 +185,7 @@
 
                             <div class="form-group">
                                 <label>Assigned Team</label> <br>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple"
-                                        style="width: 50%">
+                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
                                     <option value="A">Team A</option>
                                     <option value="B">Team B</option>
                                     <option value="W">Team C</option>
@@ -230,8 +215,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Project Budget</label> <br>
-                                <input class="form-control" id="PB" name="budget" required="" type="number"
-                                       step="0.01" style="width: 50%">
+                                <input class="form-control" id="PB" name="budget" required="" type="number" step="0.01" style="width: 50%">
                             </div>
                             <div class="form-group">
                                 <label for="birthday">Start Date</label>
@@ -260,205 +244,205 @@
                             </div>
                             <button class="btn btn-success" type="button" style="width: 30%; margin: 30px">Submit</button>
                         </div>
-<!--                        </form>-->
-<!--                    </div>&lt;!&ndash;/card-block&ndash;&gt;-->
-                </div><!-- /form card login -->
+                        <!--                        </form>-->
+                        <!--                    </div>&lt;!&ndash;/card-block&ndash;&gt;-->
+                    </div>
+                    <!-- /form card login -->
+                </div>
             </div>
         </div>
     </div>
-            </div>
-<!--Edit button Modal End-->
+    <!--Edit button Modal End-->
 
 
-<div class="container">
-    <div class="row mt-5">
+    <div class="container">
+        <div class="row mt-5">
 
-        <div class="card-deck">
-            <div class="scrollcard">
-                <div class="card border-primary shadow-lg" style="width: 18rem;">
-                    <h3 class="card-header text-white bg-primary">Project 1
+            <div class="card-deck">
+                <div class="scrollcard">
+                    <div class="card border-primary shadow-lg" style="width: 18rem;">
+                        <h3 class="card-header text-white bg-primary">Project 1
 
-                    </h3>
-                    <div class="card-body  bg-light scroll">
+                        </h3>
+                        <div class="card-body  bg-light scroll">
 
-                        <ul class="list-group list-group">
-                            <li class="list-group-item"> Project Id : 2001</li>
-                            <li class="list-group-item">Client Name : munna</li>
-                            <li class="list-group-item">Requisition: Enable</li>
-                            <li class="list-group-item">Assigned Department : Civil</li>
-                            <li class="list-group-item">Assigned Team : A</li>
-                            <li class="list-group-item">Managerial Approval: Approved</li>
-                            <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                            <li class="list-group-item">Project Budget : 20,000</li>
-                            <li class="list-group-item">Start date : 20/08/2019</li>
-                            <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                            <li class="list-group-item">Completion Date : 28/07/2020</li>
-                            <li class="list-group-item">Project Status : Running</li>
-                        </ul>
+                            <ul class="list-group list-group">
+                                <li class="list-group-item"> Project Id : 2001</li>
+                                <li class="list-group-item">Client Name : munna</li>
+                                <li class="list-group-item">Requisition: Enable</li>
+                                <li class="list-group-item">Assigned Department : Civil</li>
+                                <li class="list-group-item">Assigned Team : A</li>
+                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                <li class="list-group-item">Project Budget : 20,000</li>
+                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                <li class="list-group-item">Project Status : Running</li>
+                            </ul>
+                        </div>
+                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
                     </div>
-                     <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                </div>
+
+
+                <div class="scrollcard">
+                    <div class="card border-primary shadow-lg" style="width: 18rem;">
+                        <h3 class="card-header text-white bg-primary">Project 2
+
+                        </h3>
+                        <div class="card-body  bg-light scroll">
+
+                            <ul class="list-group list-group">
+                                <li class="list-group-item"> Project Id : 2001</li>
+                                <li class="list-group-item">Client Name : munna</li>
+                                <li class="list-group-item">Requisition: Enable</li>
+                                <li class="list-group-item">Assigned Department : Civil</li>
+                                <li class="list-group-item">Assigned Team : A</li>
+                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                <li class="list-group-item">Project Budget : 20,000</li>
+                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                <li class="list-group-item">Project Status : Running</li>
+                            </ul>
+
+                        </div>
+                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                    </div>
+                </div>
+
+
+                <div class="scrollcard">
+                    <div class="card border-primary shadow-lg" style="width: 18rem;">
+                        <h3 class="card-header text-white bg-primary">Project 3
+
+                        </h3>
+                        <div class="card-body  bg-light scroll">
+
+                            <ul class="list-group list-group">
+                                <li class="list-group-item"> Project Id : 2001</li>
+                                <li class="list-group-item">Client Name : munna</li>
+                                <li class="list-group-item">Requisition: Enable</li>
+                                <li class="list-group-item">Assigned Department : Civil</li>
+                                <li class="list-group-item">Assigned Team : A</li>
+                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                <li class="list-group-item">Project Budget : 20,000</li>
+                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                <li class="list-group-item">Project Status : Running</li>
+                            </ul>
+
+                        </div>
+                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                    </div>
+                </div>
+
+
+                <div class="scrollcard">
+                    <div class="card border-primary shadow-lg" style="width: 18rem;">
+                        <h3 class="card-header text-white bg-primary">Project 4
+
+                        </h3>
+                        <div class="card-body  bg-light scroll">
+
+                            <ul class="list-group list-group">
+                                <li class="list-group-item"> Project Id : 2001</li>
+                                <li class="list-group-item">Client Name : munna</li>
+                                <li class="list-group-item">Requisition: Enable</li>
+                                <li class="list-group-item">Assigned Department : Civil</li>
+                                <li class="list-group-item">Assigned Team : A</li>
+                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                <li class="list-group-item">Project Budget : 20,000</li>
+                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                <li class="list-group-item">Project Status : Running</li>
+                            </ul>
+                        </div>
+                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                    </div>
+                </div>
+
+                <div class="scrollcard">
+                    <div class="card border-primary shadow-lg" style="width: 18rem;">
+                        <h3 class="card-header text-white bg-primary">Project 5
+
+                        </h3>
+                        <div class="card-body  bg-light scroll">
+
+                            <ul class="list-group list-group">
+                                <li class="list-group-item"> Project Id : 2001</li>
+                                <li class="list-group-item">Client Name : munna</li>
+                                <li class="list-group-item">Requisition: Enable</li>
+                                <li class="list-group-item">Assigned Department : Civil</li>
+                                <li class="list-group-item">Assigned Team : A</li>
+                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                <li class="list-group-item">Project Budget : 20,000</li>
+                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                <li class="list-group-item">Project Status : Running</li>
+                            </ul>
+                        </div>
+                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                    </div>
+                </div>
+
+
+                <div class="scrollcard">
+                    <div class="card border-primary shadow-lg" style="width: 18rem;">
+                        <h3 class="card-header text-white bg-primary">Project 6
+
+                        </h3>
+                        <div class="card-body  bg-light scroll">
+
+                            <ul class="list-group list-group">
+                                <li class="list-group-item"> Project Id : 2001</li>
+                                <li class="list-group-item">Client Name : munna</li>
+                                <li class="list-group-item">Requisition: Enable</li>
+                                <li class="list-group-item">Assigned Department : Civil</li>
+                                <li class="list-group-item">Assigned Team : A</li>
+                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                <li class="list-group-item">Project Budget : 20,000</li>
+                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                <li class="list-group-item">Project Status : Running</li>
+                            </ul>
+                        </div>
+                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                    </div>
                 </div>
             </div>
-
-
-            <div class="scrollcard">
-                <div class="card border-primary shadow-lg" style="width: 18rem;">
-                    <h3 class="card-header text-white bg-primary">Project 2
-
-                    </h3>
-                    <div class="card-body  bg-light scroll">
-
-                        <ul class="list-group list-group">
-                            <li class="list-group-item"> Project Id : 2001</li>
-                            <li class="list-group-item">Client Name : munna</li>
-                            <li class="list-group-item">Requisition: Enable</li>
-                            <li class="list-group-item">Assigned Department : Civil</li>
-                            <li class="list-group-item">Assigned Team : A</li>
-                            <li class="list-group-item">Managerial Approval: Approved</li>
-                            <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                            <li class="list-group-item">Project Budget : 20,000</li>
-                            <li class="list-group-item">Start date : 20/08/2019</li>
-                            <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                            <li class="list-group-item">Completion Date : 28/07/2020</li>
-                            <li class="list-group-item">Project Status : Running</li>
-                        </ul>
-
-                    </div>
-                    <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                </div>
-            </div>
-
-
-            <div class="scrollcard">
-                <div class="card border-primary shadow-lg" style="width: 18rem;">
-                    <h3 class="card-header text-white bg-primary">Project 3
-
-                    </h3>
-                    <div class="card-body  bg-light scroll">
-
-                        <ul class="list-group list-group">
-                            <li class="list-group-item"> Project Id : 2001</li>
-                            <li class="list-group-item">Client Name : munna</li>
-                            <li class="list-group-item">Requisition: Enable</li>
-                            <li class="list-group-item">Assigned Department : Civil</li>
-                            <li class="list-group-item">Assigned Team : A</li>
-                            <li class="list-group-item">Managerial Approval: Approved</li>
-                            <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                            <li class="list-group-item">Project Budget : 20,000</li>
-                            <li class="list-group-item">Start date : 20/08/2019</li>
-                            <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                            <li class="list-group-item">Completion Date : 28/07/2020</li>
-                            <li class="list-group-item">Project Status : Running</li>
-                        </ul>
-
-                    </div>
-                      <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                </div>
-            </div>
-
-
-            <div class="scrollcard">
-                <div class="card border-primary shadow-lg" style="width: 18rem;">
-                    <h3 class="card-header text-white bg-primary">Project 4
-
-                    </h3>
-                    <div class="card-body  bg-light scroll">
-
-                        <ul class="list-group list-group">
-                            <li class="list-group-item"> Project Id : 2001</li>
-                            <li class="list-group-item">Client Name : munna</li>
-                            <li class="list-group-item">Requisition: Enable</li>
-                            <li class="list-group-item">Assigned Department : Civil</li>
-                            <li class="list-group-item">Assigned Team : A</li>
-                            <li class="list-group-item">Managerial Approval: Approved</li>
-                            <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                            <li class="list-group-item">Project Budget : 20,000</li>
-                            <li class="list-group-item">Start date : 20/08/2019</li>
-                            <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                            <li class="list-group-item">Completion Date : 28/07/2020</li>
-                            <li class="list-group-item">Project Status : Running</li>
-                        </ul>
-                    </div>
-                      <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                </div>
-            </div>
-
-            <div class="scrollcard">
-                <div class="card border-primary shadow-lg" style="width: 18rem;">
-                    <h3 class="card-header text-white bg-primary">Project 5
-
-                    </h3>
-                    <div class="card-body  bg-light scroll">
-
-                        <ul class="list-group list-group">
-                            <li class="list-group-item"> Project Id : 2001</li>
-                            <li class="list-group-item">Client Name : munna</li>
-                            <li class="list-group-item">Requisition: Enable</li>
-                            <li class="list-group-item">Assigned Department : Civil</li>
-                            <li class="list-group-item">Assigned Team : A</li>
-                            <li class="list-group-item">Managerial Approval: Approved</li>
-                            <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                            <li class="list-group-item">Project Budget : 20,000</li>
-                            <li class="list-group-item">Start date : 20/08/2019</li>
-                            <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                            <li class="list-group-item">Completion Date : 28/07/2020</li>
-                            <li class="list-group-item">Project Status : Running</li>
-                        </ul>
-                    </div>
-                      <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                </div>
-            </div>
-
-
-             <div class="scrollcard">
-                <div class="card border-primary shadow-lg" style="width: 18rem;">
-                    <h3 class="card-header text-white bg-primary">Project 6
-
-                    </h3>
-                    <div class="card-body  bg-light scroll">
-
-                        <ul class="list-group list-group">
-                            <li class="list-group-item"> Project Id : 2001</li>
-                            <li class="list-group-item">Client Name : munna</li>
-                            <li class="list-group-item">Requisition: Enable</li>
-                            <li class="list-group-item">Assigned Department : Civil</li>
-                            <li class="list-group-item">Assigned Team : A</li>
-                            <li class="list-group-item">Managerial Approval: Approved</li>
-                            <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                            <li class="list-group-item">Project Budget : 20,000</li>
-                            <li class="list-group-item">Start date : 20/08/2019</li>
-                            <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                            <li class="list-group-item">Completion Date : 28/07/2020</li>
-                            <li class="list-group-item">Project Status : Running</li>
-                        </ul>
-                    </div>
-                      <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                </div>
-            </div>
-    </div>
-</div>
+        </div>
 
 
 
-<!--Bootstrap CDN-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        <!--Bootstrap CDN-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 
 
-<!-- for select2         -->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-<script type="text/javascript" src="js/myscript.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
+        <!-- for select2         -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script type="text/javascript" src="js/myscript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
 
 </body>
 
 </html>
-
