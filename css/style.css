@@ -96,7 +96,7 @@
 }
 
 
-/* card style */
+/* card style by sayket */
 
 .scroll {
     max-height: 200px;
@@ -121,6 +121,7 @@
     background-color: rgb(2, 117, 216);
     outline: 1px solid slategrey;
     border-radius: 10px;
+}
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
   width: 100%;
