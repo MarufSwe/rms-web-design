@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Client Management</title>
+    <title>Project Management</title>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/js.js"></script>
+
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
@@ -20,9 +21,16 @@
 <body>
 
 
-
     <div class="navbar" style="display: flex; justify-content: flex-end">
         <ul>
+            <!-- <li class="nav-item">
+                <a href="index.html"> Home page</a>
+
+
+            </li> -->
+
+
+
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-bell" data-toggle="modal" data-target="#myModal" style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
@@ -35,24 +43,6 @@
                                 <h5>Notifications</h5>
                                 <button class="close" data-dismiss="modal">&times;</button>
                             </div>
-
-<div class="navbar" style="display: flex; justify-content: flex-end">
-     <a href="index.html" style="text-decoration: none; color: #e1f5fe; margin-right: 90%"> Home </a>
-    <ul>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-bell" data-toggle="modal" data-target="#myModal"
-                   style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
-            </a>
-
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Notifications</h5>
-                            <button class="close" data-dismiss="modal">&times;</button>
-                        </div>
-
 
                         </div>
                     </div>
@@ -134,7 +124,6 @@
             <li>
                 <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
                 Management </a>
-
             </li>
             <li>
                 <ul> Project Management
@@ -143,10 +132,10 @@
                 </ul>
             </li>
             <li>
-                <a href="#" style="text-decoration: none;"> Site Management </a>
+                <a href="site_management.html" style="text-decoration: none;"> Site Management </a>
             </li>
             <li>
-                <a href="#" style="text-decoration: none;"> Requisition Management </a>
+                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisition Management </a>
             </li>
 
         </ul>
@@ -154,56 +143,6 @@
 
 
     <!--Edit button Modal Start-->
-
-        </li>
-        <li>
-            <ul> Project Management
-                <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
-                <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
-            </ul>
-        </li>
-        <li>
-            <ul> Site Management
-                <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
-                <li><a href="" style="text-decoration: none;"> View All Sites</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" style="text-decoration: none;"> Requisition Management </a>
-        </li>
-
-    </ul>
-</div>
-
-
-<!--Edit button Modal Start-->
-<div class="row d-flex justify-content-center modalWrapper">
-    <div
-            class="modal fade addNewInputs"
-            id="modalAdd"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="modalAdd"
-            aria-hidden="true">
-
-        <div class="row justify-content-center"  style="padding: 50px">
-            <div class="col-md-8 ">
-                <span class="anchor" id="formLogin"></span>
-                <!-- form card login -->
-                <div class="card card-outline-secondary shadow-lg">
-                    <ul>
-                        <li>
-                            <h1 class="text-center mb-3" style="padding: 20px">Edit Project</h1>
-                        </li>
-                        <li>
-                            <a href="project_management.html"
-                               style="color: black; font-size: 20px; margin-left: 800px;"> &times; </a>
-                        </li>
-                    </ul>
-
-
-                    <hr>
-
 
     <div class="row d-flex justify-content-center modalWrapper">
         <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd" aria-hidden="true">
@@ -323,9 +262,13 @@
         </div>
     </div>
     <!--Edit button Modal End-->
+    <!--Edit button Modal End-->
 
+    <!-- site Management -->
 
     <div class="container">
+        <h2 class="text-center mt-3"> All Projects</h2>
+        <hr>
         <div class="row mt-5">
 
             <div class="card-deck">
@@ -497,21 +440,23 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
 
+    </div>
+    <!--Bootstrap CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 
-        <!--Bootstrap CDN-->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-
-
-        <!-- for select2         -->
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-        <script type="text/javascript" src="js/myscript.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
+    <!-- for select2         -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
 
 </body>
 
