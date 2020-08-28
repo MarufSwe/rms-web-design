@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+          <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" 
     integrity="sha256-SMGbWcp5wJOVXYlZJyAXqoVWaE/vgFA5xfrH3i/jVw0=" crossorigin="anonymous" />      
 </head>
@@ -20,7 +20,8 @@
 <body>
 
 
-<div class="navbar" style="display: flex; justify-content: flex-end">
+<div class="navbar " style="display: flex; justify-content: flex-end">
+     <a href="index.html" style="text-decoration: none; color: #e1f5fe; margin-right: 90%"> Home </a>
     <ul>
         <li class="nav-item">
             <a class="nav-link" href="#">
@@ -142,7 +143,7 @@
 <div class="container py-3 ">
     <div class="row">
       <div class="col-md-12"> 
-        <h2 class="text-center mb-3">Add New Site</h2>
+        <h2 class="text-center mb-3">Add New Requisition</h2>
 				
         <hr class="mb-4">
             <div class="row justify-content-center ">
@@ -156,60 +157,73 @@
                         <div class="card-body body">
                             <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
                             <div class="form-group">
-                                <label for="name">Project</label><br>
+                                <label for="name">Site</label><br>
                                 <select name="farhana" id="farhana">
-                                    <option value="volvo">Project A</option>
-                                    <option value="saab">Project B</option>
-                                    <option value="volvo">Project C</option>
-                                    <option value="saab">Project D</option>
+                                    <option value="volvo">Site A</option>
+                                    <option value="saab">Site B</option>
+                                    <option value="volvo">Site C</option>
+                                    <option value="saab">Site D</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Site Name</label> 
-                                <input class="form-control" id="name" name="name" required="" type="text">
+                                <label for="name">Submitted By</label><br>
+                                <select name="farhana1" id="farhana1">
+                                    <option value="volvo">Mr A</option>
+                                    <option value="saab">Mr B</option>
+                                    <option value="volvo">Mr C</option>
+                                    <option value="saab">Mr D</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label>Site ID</label> 
-                                <input class="form-control" id="SI" name="gender" required="" type="number">
+                                <label for="name">Prepared By</label><br>
+                                <select name="farhana2" id="farhana2">
+                                    <option value="volvo">Mr A</option>
+                                    <option value="saab">Mr B</option>
+                                    <option value="volvo">Mr C</option>
+                                    <option value="saab">Mr D</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="birthday">Start Date</label>
+                                <label for="birthday">Working Date</label>
                                 <input type="date" id="birthday" name="birthday">
                             </div>
                             <div class="form-group">
-                                <label for="birthday2">Expected Completion Date</label>
-                                <input type="date" id="birthday2" name="birthday2">
+                                <label>Requisition Type</label> <br>
+                                <input type="radio" id="male1" name="requisition1" value="male1">
+                                <label for="male1">Prerequisite</label><br>
+                                <input type="radio" id="female1" name="requisition1" value="female1">
+                                <label for="female1">Postrequisition</label><br>
                             </div>
                             <div class="form-group">
-                                <label for="birthday3">Completion Date</label>
-                                <input type="date" id="birthday3" name="birthday3">
+                                <label for="birthday1">Payment Date</label>
+                                <input type="date" id="birthday1" name="birthday1">
                             </div>
                             <div class="form-group">
-                                <label for="birthday4">Expected Handover Date</label>
-                                <input type="date" id="birthday4" name="birthday4">
+                                <label for="name">Payment Type</label><br>
+                                <select name="farhana3" id="farhana3">
+                                    <option value="volvo">Mobile Banking</option>
+                                    <option value="saab">Cheque</option>
+                                    <option value="volvo">Cash</option>
+                                    <option value="saab">Others</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="birthday5">Handover Date</label>
-                                <input type="date" id="birthday5" name="birthday5">
+                                <label>Payment Remarks</label> 
+                                <input class="form-control" id="name" name="name" required="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact No</label> 
+                                <input class="form-control" id="name1" name="name1" required="" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="comment">Description</label>
                                 <textarea class="form-control" rows="5" id="comment"></textarea>
                             </div>
-                            
                             <div class="form-group">
-                                <label>Project Status</label> <br>
-                                <input type="radio" id="male1" name="requisition1" value="male1">
-                                <label for="male1">Pending</label><br>
-                                <input type="radio" id="female1" name="requisition1" value="female1">
-                                <label for="female1">Running</label><br>
-                                <input type="radio" id="female2" name="requisition1" value="female2">
-                                <label for="female2">Complete</label><br>
-                                <input type="radio" id="female3" name="requisition1" value="female3">
-                                <label for="female3">Handover</label><br>
-                                <input type="radio" id="female4" name="requisition1" value="female4">
-                                <label for="female4">Postponed</label><br>
+                                <label>Purpose</label> 
+                                <input class="form-control" id="name2" name="name2" required="" type="text">
                             </div>
+                           
                             <button class="btn btn-success btn-lg float-right" type="button">Submit</button>
                             </form>
                         </div><!--/card-block-->
@@ -219,10 +233,9 @@
         
         </div><!--/col-->
     </div><!--/row-->
-</div>
-    <!--/container-->
-<!-- Scroll to Top -->
+</div><!--/container-->
 <a id="scroll-to-top" href="#" class="btn btn-primary btn-lg" role="button" title="Return to top of page" data-toggle="tooltip" data-placement="left"><i class="fa fa-arrow-up"></i></a>
+
 <!--Bootstrap CDN-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
