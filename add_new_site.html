@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>RMS</title>
+    <title>add new site</title>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/js.js"></script>
@@ -20,40 +20,204 @@
 <body>
 
 
-<div class="navbar" style="display: flex; justify-content: flex-end">
-    <ul>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-bell" data-toggle="modal" data-target="#myModal"
-                   style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
-            </a>
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3><a style="text-decoration: none; color: #fafafa" href="index.html"> RMS </a></h3>
+        </div>
 
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Notifications</h5>
-                            <button class="close" data-dismiss="modal">&times;</button>
-                        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="client management.html" style="text-decoration: none;"> Client Management </a>
+            </li>
+            <li>
+                <a href="department_management.html" style="text-decoration: none;"> Department M4anagement </a>
+            </li>
+            <li>
+                <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
+            </li>
+            <li>
+                <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
+            </li>
+            <li>
+                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
+                    Management </a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Project
+                    Management</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
+                    <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
+                </ul>
+            </li>
 
-                    </div>
+
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Site
+                    Management</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
+                    <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" style="text-decoration: none;"> Requisition Management </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell" data-toggle="modal" data-target="#myModal"
+                                   style="color: red; font-size: 20px;"></i>
+                            </a>
+
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5>Notifications</h5>
+                                            <button class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                <img class="profile-logo"
+                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                            </a>
+                        </li>
+
+                        <!--                            <li class="nav-item">-->
+                        <!--                                <a class="nav-link" href="#">Page</a>-->
+                        <!--                            </li>-->
+                    </ul>
                 </div>
             </div>
-        </li>
+        </nav>
 
-        <li class="nav-item">
-            <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
-            </a>
-        </li>
-    </ul>
+
+<!--        Add Project Form Start-->
+        <div class="container py-3 ">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-3" style="margin-bottom: 20px">Add New Site</h2>
+
+<!--        <hr class="mb-4">-->
+            <div class="row justify-content-center ">
+                <div class="col-md-8 ">
+                <span class="anchor" id="formLogin"></span>
+                            <!-- form card login -->
+                    <div class="card card-outline-secondary shadow-lg">
+                        <!-- <div class="card-header"> -->
+                            <!-- <h5 class="mb-0">Fill The Form</h5> -->
+                        <!-- </div> -->
+                        <div class="card-body body">
+                            <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
+                            <div class="form-group">
+                                <label for="name">Project</label><br>
+                                <select name="farhana" id="farhana">
+                                    <option value="volvo">Project A</option>
+                                    <option value="saab">Project B</option>
+                                    <option value="volvo">Project C</option>
+                                    <option value="saab">Project D</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Site Name</label>
+                                <input class="form-control" id="name" name="name" required="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Site ID</label>
+                                <input class="form-control" id="SI" name="gender" required="" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">Start Date</label>
+                                <input type="date" id="birthday" name="birthday">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday2">Expected Completion Date</label>
+                                <input type="date" id="birthday2" name="birthday2">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday3">Completion Date</label>
+                                <input type="date" id="birthday3" name="birthday3">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday4">Expected Handover Date</label>
+                                <input type="date" id="birthday4" name="birthday4">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday5">Handover Date</label>
+                                <input type="date" id="birthday5" name="birthday5">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Description</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Project Status</label> <br>
+                                <input type="radio" id="male1" name="requisition1" value="male1">
+                                <label for="male1">Pending</label><br>
+                                <input type="radio" id="female1" name="requisition1" value="female1">
+                                <label for="female1">Running</label><br>
+                                <input type="radio" id="female2" name="requisition1" value="female2">
+                                <label for="female2">Complete</label><br>
+                                <input type="radio" id="female3" name="requisition1" value="female3">
+                                <label for="female3">Handover</label><br>
+                                <input type="radio" id="female4" name="requisition1" value="female4">
+                                <label for="female4">Postponed</label><br>
+                            </div>
+                            <button class="btn btn-success btn-lg float-right" type="button" style="background: #358597; color: #fafafa">Submit</button>
+                            </form>
+                        </div><!--/card-block-->
+                    </div><!-- /form card login -->
+                </div>
+            </div>
+
+        </div><!--/col-->
+    </div><!--/row-->
+</div>
+<!--        Add Project Form End-->
+
+
+        <!-- Scroll to Top -->
+        <a id="scroll-to-top" href="#" class="btn btn-warning btn-lg" role="button" title="Return to top of page"
+           data-toggle="tooltip" data-placement="left"><i class="fa fa-arrow-up"></i></a>
+
+
+    </div>
 </div>
 
 
-<!--Notification Modal-->
-
-
-<!--Modal-->
+<!--Profile Modal-->
 <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
@@ -94,132 +258,7 @@
 <!--Modal: Login with Avatar Form-->
 
 
-<div id="sidebar">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <ul>
-        <li>
-            <a href="client management.html" style="text-decoration: none;"> Client Management </a>
-        </li>
-        <li>
-            <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
-        </li>
-        <li>
-            <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
-        </li>
-        <li>
-            <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
-        </li>
-        <li>
-            <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
-                Management </a>
-        </li>
-        <li>
-            <ul> Project Management
-                <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
-                <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
-            </ul>
-        </li>
-        <li>
-            <ul> Site Management
-                <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
-                <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" style="text-decoration: none;"> Requisition Management </a>
-        </li>
 
-    </ul>
-
-</div>
-<div class="container py-3 ">
-    <div class="row">
-      <div class="col-md-12"> 
-        <h2 class="text-center mb-3">Add New Site</h2>
-				
-        <hr class="mb-4">
-            <div class="row justify-content-center ">
-                <div class="col-md-8 ">
-                <span class="anchor" id="formLogin"></span> 
-                            <!-- form card login -->
-                    <div class="card card-outline-secondary shadow-lg">
-                        <!-- <div class="card-header"> -->
-                            <!-- <h5 class="mb-0">Fill The Form</h5> -->
-                        <!-- </div> -->
-                        <div class="card-body body">
-                            <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
-                            <div class="form-group">
-                                <label for="name">Project</label><br>
-                                <select name="farhana" id="farhana">
-                                    <option value="volvo">Project A</option>
-                                    <option value="saab">Project B</option>
-                                    <option value="volvo">Project C</option>
-                                    <option value="saab">Project D</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Site Name</label> 
-                                <input class="form-control" id="name" name="name" required="" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>Site ID</label> 
-                                <input class="form-control" id="SI" name="gender" required="" type="number">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday">Start Date</label>
-                                <input type="date" id="birthday" name="birthday">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday2">Expected Completion Date</label>
-                                <input type="date" id="birthday2" name="birthday2">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday3">Completion Date</label>
-                                <input type="date" id="birthday3" name="birthday3">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday4">Expected Handover Date</label>
-                                <input type="date" id="birthday4" name="birthday4">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday5">Handover Date</label>
-                                <input type="date" id="birthday5" name="birthday5">
-                            </div>
-                            <div class="form-group">
-                                <label for="comment">Description</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Project Status</label> <br>
-                                <input type="radio" id="male1" name="requisition1" value="male1">
-                                <label for="male1">Pending</label><br>
-                                <input type="radio" id="female1" name="requisition1" value="female1">
-                                <label for="female1">Running</label><br>
-                                <input type="radio" id="female2" name="requisition1" value="female2">
-                                <label for="female2">Complete</label><br>
-                                <input type="radio" id="female3" name="requisition1" value="female3">
-                                <label for="female3">Handover</label><br>
-                                <input type="radio" id="female4" name="requisition1" value="female4">
-                                <label for="female4">Postponed</label><br>
-                            </div>
-                            <button class="btn btn-success btn-lg float-right" type="button">Submit</button>
-                            </form>
-                        </div><!--/card-block-->
-                    </div><!-- /form card login -->
-                </div>
-            </div>
-        
-        </div><!--/col-->
-    </div><!--/row-->
-</div>
-    <!--/container-->
-<!-- Scroll to Top -->
-<a id="scroll-to-top" href="#" class="btn btn-primary btn-lg" role="button" title="Return to top of page" data-toggle="tooltip" data-placement="left"><i class="fa fa-arrow-up"></i></a>
 <!--Bootstrap CDN-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
