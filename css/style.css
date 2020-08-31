@@ -158,3 +158,16 @@
 
 
 /* card style by sayket  for Site */
+
+/* client-managemet-table-th-color */
+.table-info, .table-info>td, .table-info>th {
+    background-color:white !important;
+}
+.edit-btn {
+    color:#0171c4; 
+    font-size: 27px !important;
+}
+.delete-btn {
+    font-size: 25px !important; 
+    color:#ff4700;
+}
