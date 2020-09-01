@@ -1,13 +1,21 @@
+  $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+
+
 // for datatable
 $(document).ready(function() {
     var table = $('#example').DataTable();
-     
+
     // $('#example tbody').on('click', 'tr', function () {
     //     var data = table.row( this ).data();
     //     alert( 'You clicked on '+data[0]+'\'s row' );
     // } );
 } );
-// for form 
+// for form
 /* Scroll to Top */
 $(document).ready(function(){
     $(window).scroll(function () {
@@ -25,7 +33,7 @@ $(document).ready(function(){
            }, 800);
            return false;
        });
-       
+
        $('#scroll-to-top').tooltip('show');
 
 });
@@ -33,4 +41,3 @@ $(document).ready(function(){
 $(document).ready(function() {
     $('.js-example-basic-multiple').select2();
 });
-
