@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" 
-    integrity="sha256-SMGbWcp5wJOVXYlZJyAXqoVWaE/vgFA5xfrH3i/jVw0=" crossorigin="anonymous" />      
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css"
+          integrity="sha256-SMGbWcp5wJOVXYlZJyAXqoVWaE/vgFA5xfrH3i/jVw0=" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -64,7 +65,12 @@
             </li>
 
             <li>
-                <a href="#" style="text-decoration: none;"> Requisition Management </a>
+                <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Requisition
+                    Management</a>
+                <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
+                     <li><a href="add_new_requisition.html" style="text-decoration: none;">Add New Requisition</a></li>
+                    <li><a href="site_management.html" style="text-decoration: none;"> View All Requisition</a></li>
+                </ul>
             </li>
         </ul>
     </nav>
@@ -123,89 +129,91 @@
         </nav>
 
 
-<!--        Add Project Form Start-->
+        <!--        Add Project Form Start-->
         <div class="container py-3 ">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center mb-3" style="margin-bottom: 20px">Add New Site</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center mb-3" style="margin-bottom: 20px">Add New Site</h2>
 
-<!--        <hr class="mb-4">-->
-            <div class="row justify-content-center ">
-                <div class="col-md-8 ">
-                <span class="anchor" id="formLogin"></span>
+                    <!--        <hr class="mb-4">-->
+                    <div class="row justify-content-center ">
+                        <div class="col-md-8 ">
+                            <span class="anchor" id="formLogin"></span>
                             <!-- form card login -->
-                    <div class="card card-outline-secondary shadow-lg">
-                        <!-- <div class="card-header"> -->
-                            <!-- <h5 class="mb-0">Fill The Form</h5> -->
-                        <!-- </div> -->
-                        <div class="card-body body">
-                            <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
-                            <div class="form-group">
-                                <label for="name">Project</label><br>
-                                <select name="farhana" id="farhana">
-                                    <option value="volvo">Project A</option>
-                                    <option value="saab">Project B</option>
-                                    <option value="volvo">Project C</option>
-                                    <option value="saab">Project D</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Site Name</label>
-                                <input class="form-control" id="name" name="name" required="" type="text">
-                            </div>
-                            <div class="form-group">
-                                <label>Site ID</label>
-                                <input class="form-control" id="SI" name="gender" required="" type="number">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday">Start Date</label>
-                                <input type="date" id="birthday" name="birthday">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday2">Expected Completion Date</label>
-                                <input type="date" id="birthday2" name="birthday2">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday3">Completion Date</label>
-                                <input type="date" id="birthday3" name="birthday3">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday4">Expected Handover Date</label>
-                                <input type="date" id="birthday4" name="birthday4">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday5">Handover Date</label>
-                                <input type="date" id="birthday5" name="birthday5">
-                            </div>
-                            <div class="form-group">
-                                <label for="comment">Description</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
+                            <div class="card card-outline-secondary shadow-lg">
+                                <!-- <div class="card-header"> -->
+                                <!-- <h5 class="mb-0">Fill The Form</h5> -->
+                                <!-- </div> -->
+                                <div class="card-body body">
+                                    <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
+                                        <div class="form-group">
+                                            <label for="name">Project</label><br>
+                                            <select name="farhana" id="farhana">
+                                                <option value="volvo">Project A</option>
+                                                <option value="saab">Project B</option>
+                                                <option value="volvo">Project C</option>
+                                                <option value="saab">Project D</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Site Name</label>
+                                            <input class="form-control" id="name" name="name" required="" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Site ID</label>
+                                            <input class="form-control" id="SI" name="gender" required="" type="number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday">Start Date</label>
+                                            <input type="date" id="birthday" name="birthday">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday2">Expected Completion Date</label>
+                                            <input type="date" id="birthday2" name="birthday2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday3">Completion Date</label>
+                                            <input type="date" id="birthday3" name="birthday3">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday4">Expected Handover Date</label>
+                                            <input type="date" id="birthday4" name="birthday4">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthday5">Handover Date</label>
+                                            <input type="date" id="birthday5" name="birthday5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comment">Description</label>
+                                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        </div>
 
-                            <div class="form-group">
-                                <label>Project Status</label> <br>
-                                <input type="radio" id="male1" name="requisition1" value="male1">
-                                <label for="male1">Pending</label><br>
-                                <input type="radio" id="female1" name="requisition1" value="female1">
-                                <label for="female1">Running</label><br>
-                                <input type="radio" id="female2" name="requisition1" value="female2">
-                                <label for="female2">Complete</label><br>
-                                <input type="radio" id="female3" name="requisition1" value="female3">
-                                <label for="female3">Handover</label><br>
-                                <input type="radio" id="female4" name="requisition1" value="female4">
-                                <label for="female4">Postponed</label><br>
-                            </div>
-                            <button class="btn btn-success btn-lg float-right" type="button" style="background: #358597; color: #fafafa">Submit</button>
-                            </form>
-                        </div><!--/card-block-->
-                    </div><!-- /form card login -->
-                </div>
-            </div>
+                                        <div class="form-group">
+                                            <label>Project Status</label> <br>
+                                            <input type="radio" id="male1" name="requisition1" value="male1">
+                                            <label for="male1">Pending</label><br>
+                                            <input type="radio" id="female1" name="requisition1" value="female1">
+                                            <label for="female1">Running</label><br>
+                                            <input type="radio" id="female2" name="requisition1" value="female2">
+                                            <label for="female2">Complete</label><br>
+                                            <input type="radio" id="female3" name="requisition1" value="female3">
+                                            <label for="female3">Handover</label><br>
+                                            <input type="radio" id="female4" name="requisition1" value="female4">
+                                            <label for="female4">Postponed</label><br>
+                                        </div>
+                                        <button class="btn btn-success btn-lg float-right" type="button"
+                                                style="background: #358597; color: #fafafa">Submit
+                                        </button>
+                                    </form>
+                                </div><!--/card-block-->
+                            </div><!-- /form card login -->
+                        </div>
+                    </div>
 
-        </div><!--/col-->
-    </div><!--/row-->
-</div>
-<!--        Add Project Form End-->
+                </div><!--/col-->
+            </div><!--/row-->
+        </div>
+        <!--        Add Project Form End-->
 
 
         <!-- Scroll to Top -->
@@ -258,11 +266,16 @@
 <!--Modal: Login with Avatar Form-->
 
 
-
 <!--Bootstrap CDN-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
 
 <!--Bootstrap CDN-->
@@ -277,7 +290,8 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="js/myscript.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"
+        integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
 
 </body>
 
