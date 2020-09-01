@@ -38,41 +38,656 @@
 <body>
 
 
-<div class="navbar" style="display: flex; justify-content: flex-end">
-     <a href="index.html" style="text-decoration: none; color: #e1f5fe; margin-right: 90%"> Home </a>
-    <ul>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-bell" data-toggle="modal" data-target="#myModal"
-                   style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
-            </a>
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3><a style="text-decoration: none; color: #fafafa" href="index.html"> RMS </a></h3>
+        </div>
 
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Notifications</h5>
-                            <button class="close" data-dismiss="modal">&times;</button>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="client management.html" style="text-decoration: none;"> Client Management </a>
+            </li>
+            <li>
+                <a href="department_management.html" style="text-decoration: none;"> Department M4anagement </a>
+            </li>
+            <li>
+                <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
+            </li>
+            <li>
+                <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
+            </li>
+            <li>
+                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
+                    Management </a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Project
+                    Management</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
+                    <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
+                </ul>
+            </li>
+
+
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Site
+                    Management</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
+                    <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Requisition
+                    Management</a>
+                <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
+                    <li><a href="add_new_requisition.html" style="text-decoration: none;">Add New Requisition</a></li>
+                    <li><a href="site_management.html" style="text-decoration: none;"> View All Requisition</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell" data-toggle="modal" data-target="#myModal"
+                                   style="color: red; font-size: 20px;"></i>
+                            </a>
+
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5>Notifications</h5>
+                                            <button class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                <img class="profile-logo"
+                                     src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                            </a>
+                        </li>
+
+                        <!--                            <li class="nav-item">-->
+                        <!--                                <a class="nav-link" href="#">Page</a>-->
+                        <!--                            </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Sayket Client add code Start-->
+        <h1 class="text-center" style="margin-top: 20px; margin-bottom: 20px">Unit management</h1>
+        <div class="layout_content" style="margin-bottom: 20px">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <div class="accordionform">
+                            <div class="accordion" id="accordionExample">
+                                <!-- Unit Form -->
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn btn text btn-success float-right" type="button"
+                                                    data-toggle="collapse" data-target="#collapseFour"
+                                                    aria-expanded="true" aria-controls="collapseFour"
+                                                    style="background: #358597; color: #fafafa">
+                                                Add Unit
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingOne"
+                                         data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="exampleFormControlSelect1">Unit Type</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option selected>Kg</option>
+                                                            <option>Liter</option>
+                                                            <option>gm</option>
+
+                                                        </select>
+                                                    </div>
+
+
+                                                    <div class="form-group col-md-6">
+                                                        <label for="exampleFormControlSelect1">Status</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option selected>Active</option>
+                                                            <option>Enable</option>
+                                                            <option>Disable</option>
+
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary"
+                                                        style="background: #358597; color: #fafafa">Submit
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
             </div>
-        </li>
+        </div>
+        <!--Sayket Client add code End-->
 
-        <li class="nav-item">
-            <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
-            </a>
-        </li>
-    </ul>
+
+        <!-- Farhana client management page Start -->
+        <div>
+            <div class="row d-flex justify-content-center modalWrapper">
+                <div
+                        class="modal fade addNewInputs"
+                        id="modalAdd"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="modalAdd"
+                        aria-hidden="true"
+                >
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                                <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">
+                                    Edit Your Form
+                                </h4>
+                                <button
+                                        type="button"
+                                        class="close text-primary"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                >
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mx-3">
+                                <div class="md-form mb-5">
+                                    <input
+                                            type="text"
+                                            id="inputName"
+                                            class="form-control validate"
+                                    />
+                                    <label data-error="wrong" data-success="right" for="inputName"
+                                    >Unit Type</label
+                                    >
+                                </div>
+
+                                <div class="md-form mb-5">
+                                    <label for="status">Choose a Status:</label>
+                                    <select id="cars" name="cars">
+                                        <option value="volvo">Active</option>
+                                        <option value="saab">Deactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                    class="modal-footer d-flex justify-content-center buttonAddFormWrapper"
+                            >
+                                <button
+                                        class="btn btn-outline-primary btn-block buttonAdd"
+                                        data-dismiss="modal"
+                                >
+                                    Add Edited Form
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <table id="example" class="table-hover table-info" style="width: 100%;">
+                    <thead class="bg-info text-white">
+                    <tr>
+                        <th>Unit Type (Kg, Liter, gm. Etc.)</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>Kg</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ltr</td>
+                        <td>Disable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>gm</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>kgm</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pound</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Kg</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ltr</td>
+                        <td>Disable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>gm</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>kgm</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pound</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kg</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ltr</td>
+                        <td>Disable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>gm</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>kgm</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pound</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kg</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ltr</td>
+                        <td>Disable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>gm</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>kgm</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pound</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kg</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ltr</td>
+                        <td>Disable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>gm</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>kgm</td>
+                        <td>Active</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pound</td>
+                        <td>Enable</td>
+                        <td>
+                            <div>
+                                <i data-toggle="modal" data-target="#modalAdd"
+                                   class="fa fa-edit edit-btn"
+                                   aria-hidden="true"
+                                ></i>
+                                <i
+                                        class="fa fa-trash-o delete-btn"
+                                ></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                    <tfoot>
+                    <!--            <tr>-->
+                    <!--                <th>Name</th>-->
+                    <!--                <th>Position</th>-->
+                    <!--                <th>Office</th>-->
+                    <!--                <th>Age</th>-->
+                    <!--                <th>Start date</th>-->
+                    <!--                <th>Salary</th>-->
+                    <!--                <th>Action</th>-->
+                    <!--            </tr>-->
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+        <!-- Farhana client management page End -->
+
+
+    </div>
+
 </div>
 
-
-<!--Notification Modal-->
-
-
-<!--Modal-->
+<!--Profile Modal-->
 <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
@@ -112,679 +727,6 @@
 </div>
 <!--Modal: Login with Avatar Form-->
 
-
-<div id="sidebar">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <ul>
-        <li>
-            <a href="client management.html" style="text-decoration: none;"> Client Management </a>
-        </li>
-        <li>
-            <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
-        </li>
-        <li>
-            <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
-        </li>
-        <li>
-            <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
-        </li>
-        <li>
-            <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item Management </a>
-        </li>
-        <li>
-            <ul> Project Management
-                <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
-                <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
-            </ul>
-        </li>
-        <li>
-            <ul> Site Management
-                <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
-                <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" style="text-decoration: none;"> Requisition Management </a>
-        </li>
-
-    </ul>
-</div>
-
-<!--Sayket Client add code Start-->
- <h1 class="text-center" style="padding: 20px">Unit management</h1>
-   <div class="layout_content" style="margin-bottom: 20px">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col">
-                            <div class="accordionform">
-                                <div class="accordion" id="accordionExample">
-                                    <!-- Unit Form -->
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn btn text btn-success float-right" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                        Add Unit
-                                      </button>
-                                            </h2>
-                                        </div>
-
-                                        <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <form>
-                                                    <div class="form-row">
-                                                        <div class="form-group col-md-6">
-                                                            <label for="exampleFormControlSelect1">Unit Type</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                          <option selected>Kg</option>
-                                                          <option>Liter </option>
-                                                          <option>gm</option>
-
-                                                        </select>
-                                                        </div>
-
-
-                                                        <div class="form-group col-md-6">
-                                                            <label for="exampleFormControlSelect1">Status</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                          <option selected>Active</option>
-                                                          <option>Enable </option>
-                                                          <option>Disable</option>
-
-                                                        </select>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--Sayket Client add code End-->
-
-
-<!-- Farhana client management page Start -->
-<div>
-    <div class="row d-flex justify-content-center modalWrapper">
-        <div
-                class="modal fade addNewInputs"
-                id="modalAdd"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="modalAdd"
-                aria-hidden="true"
-        >
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">
-                            Edit Your Form
-                        </h4>
-                        <button
-                                type="button"
-                                class="close text-primary"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body mx-3">
-                        <div class="md-form mb-5">
-                            <input
-                                    type="text"
-                                    id="inputName"
-                                    class="form-control validate"
-                            />
-                            <label data-error="wrong" data-success="right" for="inputName"
-                            >Unit Type</label
-                            >
-                        </div>
-
-                        <div class="md-form mb-5">
-                            <label for="status">Choose a Status:</label>
-                            <select id="cars" name="cars">
-                                <option value="volvo">Active</option>
-                                <option value="saab">Deactive</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div
-                            class="modal-footer d-flex justify-content-center buttonAddFormWrapper"
-                    >
-                        <button
-                                class="btn btn-outline-primary btn-block buttonAdd"
-                                data-dismiss="modal"
-                        >
-                            Add Edited Form
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <table id="example" class="table-hover table-info" style="width: 100%;">
-            <thead class="bg-info text-white">
-            <tr>
-                <th>Unit Type (Kg, Liter, gm. Etc.)</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            <tr>
-                <td>Kg</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: #ff0000;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Ltr</td>
-                <td>Disable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>gm</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>kgm</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>pound</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Kg</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: #ff0000;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Ltr</td>
-                <td>Disable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>gm</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>kgm</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>pound</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Kg</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: #ff0000;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Ltr</td>
-                <td>Disable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>gm</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>kgm</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>pound</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Kg</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: #ff0000;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Ltr</td>
-                <td>Disable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>gm</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>kgm</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>pound</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Kg</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: #ff0000;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Ltr</td>
-                <td>Disable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>gm</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>kgm</td>
-                <td>Active</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>pound</td>
-                <td>Enable</td>
-                <td>
-                    <button data-toggle="modal" data-target="#modalAdd">
-                        <i
-                                class="fa fa-edit"
-                                aria-hidden="true"
-                                style="color: green; font-size: 30px;"
-                        ></i>
-                    </button>
-                    <button>
-                        <i
-                                class="fa fa-trash-o"
-                                style="font-size: 30px; color: red;"
-                        ></i>
-                    </button>
-                </td>
-            </tr>
-
-            </tbody>
-            <tfoot>
-<!--            <tr>-->
-<!--                <th>Name</th>-->
-<!--                <th>Position</th>-->
-<!--                <th>Office</th>-->
-<!--                <th>Age</th>-->
-<!--                <th>Start date</th>-->
-<!--                <th>Salary</th>-->
-<!--                <th>Action</th>-->
-<!--            </tr>-->
-            </tfoot>
-        </table>
-    </div>
-
-</div>
-<!-- Farhana client management page End -->
 
 <!--Bootstrap CDN-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

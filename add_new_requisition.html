@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Add New Project</title>
+    <title>add new requisition</title>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/js.js"></script>
@@ -16,11 +16,10 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css"
           integrity="sha256-SMGbWcp5wJOVXYlZJyAXqoVWaE/vgFA5xfrH3i/jVw0=" crossorigin="anonymous"/>
-
-
 </head>
 
 <body>
+
 
 <div class="wrapper">
     <!-- Sidebar  -->
@@ -69,7 +68,7 @@
                 <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Requisition
                     Management</a>
                 <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
-                     <li><a href="add_new_requisition.html" style="text-decoration: none;">Add New Requisition</a></li>
+                    <li><a href="add_new_requisition.html" style="text-decoration: none;">Add New Requisition</a></li>
                     <li><a href="site_management.html" style="text-decoration: none;"> View All Requisition</a></li>
                 </ul>
             </li>
@@ -134,9 +133,9 @@
         <div class="container py-3 ">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center mb-3" style="margin-bottom: 20px">Add New Project</h2>
+                    <h2 class="text-center mb-3">Add New Requisition</h2>
 
-                    <!--                    <hr class="mb-4">-->
+                    <hr class="mb-4">
                     <div class="row justify-content-center ">
                         <div class="col-md-8 ">
                             <span class="anchor" id="formLogin"></span>
@@ -148,103 +147,74 @@
                                 <div class="card-body body">
                                     <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
                                         <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input class="form-control" id="name" name="name" required="" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Project ID</label>
-                                            <input class="form-control" id="PI" name="gender" required="" type="number">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Requisition Status</label> <br>
-                                            <input type="radio" id="male" name="gender" value="male">
-                                            <label for="male">Enable</label><br>
-                                            <input type="radio" id="female" name="gender" value="female">
-                                            <label for="female">Disable</label><br>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Assigned Client</label> <br>
-                                            <select class="js-example-basic-multiple" name="states[]"
-                                                    multiple="multiple">
-                                                <option value="A">Client A</option>
-                                                <option value="B">Client B</option>
-                                                <option value="W">Client C</option>
-                                                <option value="Y">Client D</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Assigned Department</label> <br>
-                                            <select class="js-example-basic-multiple" name="states[]"
-                                                    multiple="multiple">
-                                                <option value="A">Department A</option>
-                                                <option value="B">Department B</option>
-                                                <option value="W">Department C</option>
-                                                <option value="Y">Department D</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Assigned Team</label> <br>
-                                            <select class="js-example-basic-multiple" name="states[]"
-                                                    multiple="multiple">
-                                                <option value="A">Team A</option>
-                                                <option value="B">Team B</option>
-                                                <option value="W">Team C</option>
-                                                <option value="Y">Team D</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Managerial Approval</label> <br>
-                                            <select name="cars" id="cars">
-                                                <option value="volvo">Approved</option>
-                                                <option value="saab">Disapproved</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Administrative Approval</label> <br>
+                                            <label for="name">Site</label><br>
                                             <select name="farhana" id="farhana">
-                                                <option value="volvo">Approved</option>
-                                                <option value="saab">Disapproved</option>
+                                                <option value="volvo">Site A</option>
+                                                <option value="saab">Site B</option>
+                                                <option value="volvo">Site C</option>
+                                                <option value="saab">Site D</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>Accounts Approval</label> <br>
-                                            <select name="afrin" id="afrin">
-                                                <option value="volvo">Approved</option>
-                                                <option value="saab">Disapproved</option>
+                                            <label for="name">Submitted By</label><br>
+                                            <select name="farhana1" id="farhana1">
+                                                <option value="volvo">Mr A</option>
+                                                <option value="saab">Mr B</option>
+                                                <option value="volvo">Mr C</option>
+                                                <option value="saab">Mr D</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>Project Budget</label> <br>
-                                            <input class="form-control" id="PB" name="budget" required="" type="number"
-                                                   step="0.01">
+                                            <label for="name">Prepared By</label><br>
+                                            <select name="farhana2" id="farhana2">
+                                                <option value="volvo">Mr A</option>
+                                                <option value="saab">Mr B</option>
+                                                <option value="volvo">Mr C</option>
+                                                <option value="saab">Mr D</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="birthday">Start Date</label>
+                                            <label for="birthday">Working Date</label>
                                             <input type="date" id="birthday" name="birthday">
                                         </div>
                                         <div class="form-group">
-                                            <label for="birthday2">Expected Completion Date</label>
-                                            <input type="date" id="birthday2" name="birthday2">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="birthday3">Completion Date</label>
-                                            <input type="date" id="birthday3" name="birthday3">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Project Status</label> <br>
+                                            <label>Requisition Type</label> <br>
                                             <input type="radio" id="male1" name="requisition1" value="male1">
-                                            <label for="male1">Pending</label><br>
+                                            <label for="male1">Prerequisite</label><br>
                                             <input type="radio" id="female1" name="requisition1" value="female1">
-                                            <label for="female1">Running</label><br>
-                                            <input type="radio" id="female2" name="requisition1" value="female2">
-                                            <label for="female2">Complete</label><br>
-                                            <input type="radio" id="female3" name="requisition1" value="female3">
-                                            <label for="female3">Handover</label><br>
-                                            <input type="radio" id="female4" name="requisition1" value="female4">
-                                            <label for="female4">Postponed</label><br>
+                                            <label for="female1">Postrequisition</label><br>
                                         </div>
-                                        <button class="btn btn-lg float-right" type="button"
+                                        <div class="form-group">
+                                            <label for="birthday1">Payment Date</label>
+                                            <input type="date" id="birthday1" name="birthday1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Payment Type</label><br>
+                                            <select name="farhana3" id="farhana3">
+                                                <option value="volvo">Mobile Banking</option>
+                                                <option value="saab">Cheque</option>
+                                                <option value="volvo">Cash</option>
+                                                <option value="saab">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Payment Remarks</label>
+                                            <input class="form-control" id="name" name="name" required="" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Contact No</label>
+                                            <input class="form-control" id="name1" name="name1" required="" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comment">Description</label>
+                                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Purpose</label>
+                                            <input class="form-control" id="name2" name="name2" required="" type="text">
+                                        </div>
+
+                                        <button class="btn btn-success btn-lg float-right" type="button"
                                                 style="background: #358597; color: #fafafa">Submit
                                         </button>
                                     </form>
@@ -255,7 +225,7 @@
 
                 </div><!--/col-->
             </div><!--/row-->
-        </div>
+        </div><!--/container-->
         <!--        Add Project Form End-->
 
 
@@ -319,7 +289,18 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-<!-- for select2         -->
+
+
+<!--Bootstrap CDN-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="js/myscript.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"

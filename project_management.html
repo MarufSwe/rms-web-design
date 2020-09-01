@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/js.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -21,479 +22,506 @@
 <body>
 
 
-    <div class="navbar" style="display: flex; justify-content: flex-end">
-        <ul>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-bell" data-toggle="modal" data-target="#myModal" style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
-                </a>
-
-                <div class="modal" id="myModal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5>Notifications</h5>
-                                <button class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
-                </a>
-            </li>
-        </ul>
-    </div>
-
-
-    <!--Notification Modal-->
-
-
-    <!--Modal-->
-    <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-            <!--Content-->
-            <div class="modal-content">
-
-                <!--Header-->
-                <div class="modal-header">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
-                    <button class="close" data-dismiss="modal">
-                    <i class="fas fa-times" style="font-size: 15px;"></i></button>
-                </div>
-                <!--Body-->
-
-                <div class="modal-body text-center mb-1">
-                    <h3 style="color: palevioletred">Farhana Afreen</h3>
-                    <hr>
-                    <div class="md-form ml-0 mr-0">
-                        <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i> Profile
-                    </button>
-                    </div>
-                    <hr>
-                    <div class="text-center mt-1">
-                        <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
-                    </button>
-                    </div>
-                    <hr>
-                    <div class="text-center mt-1">
-                        <button class="btn btn-cyan mt-1"><i class="fas fa-power-off" style="margin-right: 5px"></i>Log Out
-                    </button>
-                    </div>
-
-                </div>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a style="text-decoration: none; color: #fafafa" href="index.html"> RMS </a></h3>
             </div>
-        </div>
-    </div>
-    <!--Modal: Login with Avatar Form-->
 
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="client management.html" style="text-decoration: none;"> Client Management </a>
+                </li>
+                <li>
+                    <a href="department_management.html" style="text-decoration: none;"> Department M4anagement </a>
+                </li>
+                <li>
+                    <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
+                </li>
+                <li>
+                    <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
+                </li>
+                <li>
+                    <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
+                           Management </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Project
+                           Management</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
+                        <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
+                    </ul>
+                </li>
 
-    <div id="sidebar">
-        <div class="toggle-btn" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Site
+                           Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
+                        <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
+                    </ul>
+                </li>
 
+                <li>
+                    <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Requisition Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
+                        <li><a href="add_new_requisition.html" style="text-decoration: none;">Add New Requisition</a></li>
+                        <li><a href="site_management.html" style="text-decoration: none;"> View All Requisition</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
 
-        <ul>
-            <li>
-                <a href="client management.html" style="text-decoration: none;"> Client Management </a>
-            </li>
-            <li>
-                <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
-            </li>
-            <li>
-                <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
-            </li>
-            <li>
-                <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
-            </li>
-            <li>
-                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
-                Management </a>
-            </li>
-            <li>
-                <ul> Project Management
-                    <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
-                    <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
-                </ul>
-            </li>
-            <li>
-                <ul> Site Management
-                    <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
-                    <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisition Management </a>
-            </li>
+        <!-- Page Content  -->
+        <div id="content">
 
-        </ul>
-    </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
 
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                       <i class="fas fa-align-left"></i>
+                       <span>Toggle Sidebar</span>
+                   </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                       <i class="fas fa-align-justify"></i>
+                   </button>
 
-    <!--Edit button Modal Start-->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
 
-    <div class="row d-flex justify-content-center modalWrapper">
-        <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd" aria-hidden="true">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-bell" data-toggle="modal" data-target="#myModal" style="color: red; font-size: 20px;"></i>
+                                </a>
 
-            <div class="row justify-content-center ">
-                <div class="col-md-8 ">
-                    <span class="anchor" id="formLogin"></span>
-                    <!-- form card login -->
-                    <div class="card card-outline-secondary shadow-lg">
-                        <ul>
-                            <li>
-                                <h1 class="text-center mb-3" style="padding: 20px">Edit Project</h1>
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Notifications</h5>
+                                                <button class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li>
-                                <a href="project_management.html" style="color: black; font-size: 20px; margin-left: 800px;"> &times; </a>
+
+                            <li class="nav-item">
+                                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                    <img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                                </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </nav>
 
 
+            <!--        sayket card start-->
+            <div class="row d-flex justify-content-center modalWrapper">
+                <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd" aria-hidden="true">
+
+                    <div class="row justify-content-center ">
+                        <div class="col-md-8 ">
+                            <span class="anchor" id="formLogin"></span>
+                            <!-- form card login -->
+                            <div class="card card-outline-secondary shadow-lg">
+                                <ul>
+                                    <li>
+                                        <h1 class="text-center mb-3" style="padding: 20px">Edit Project</h1>
+                                    </li>
+                                    <li>
+                                        <a href="project_management.html" style="color: black; font-size: 20px; margin-left: 800px;"> &times; </a>
+                                    </li>
+                                </ul>
+
+
+                                <hr>
+
+                                <div class="container">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input class="form-control" id="name" name="name" required="" type="text" style="width: 50%">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Project ID</label>
+                                        <input class="form-control" id="PI" name="gender" required="" type="number" style="width: 50%">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Requisition Status</label> <br>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Enable</label><br>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Disable</label><br>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Assigned Client</label> <br>
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
+                                       <option value="A">Client A</option>
+                                       <option value="B">Client B</option>
+                                       <option value="W">Client C</option>
+                                       <option value="Y">Client D</option>
+                                   </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Assigned Department</label> <br>
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
+                                       <option value="A">Department A</option>
+                                       <option value="B">Department B</option>
+                                       <option value="W">Department C</option>
+                                       <option value="Y">Department D</option>
+                                   </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Assigned Team</label> <br>
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
+                                       <option value="A">Team A</option>
+                                       <option value="B">Team B</option>
+                                       <option value="W">Team C</option>
+                                       <option value="Y">Team D</option>
+                                   </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Managerial Approval</label> <br>
+                                        <select name="cars" id="cars">
+                                       <option value="volvo">Approved</option>
+                                       <option value="saab">Disapproved</option>
+                                   </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Administrative Approval</label> <br>
+                                        <select name="farhana" id="farhana">
+                                       <option value="volvo">Approved</option>
+                                       <option value="saab">Disapproved</option>
+                                   </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Accounts Approval</label> <br>
+                                        <select name="afrin" id="afrin">
+                                       <option value="volvo">Approved</option>
+                                       <option value="saab">Disapproved</option>
+                                   </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Project Budget</label> <br>
+                                        <input class="form-control" id="PB" name="budget" required="" type="number" step="0.01" style="width: 50%">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthday">Start Date</label>
+                                        <input type="date" id="birthday" name="birthday">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthday2">Expected Completion Date</label>
+                                        <input type="date" id="birthday2" name="birthday2">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthday3">Completion Date</label>
+                                        <input type="date" id="birthday3" name="birthday3">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Project Status</label> <br>
+                                        <input type="radio" id="male1" name="requisition1" value="male1">
+                                        <label for="male1">Pending</label><br>
+                                        <input type="radio" id="female1" name="requisition1" value="female1">
+                                        <label for="female1">Running</label><br>
+                                        <input type="radio" id="female2" name="requisition1" value="female2">
+                                        <label for="female2">Complete</label><br>
+                                        <input type="radio" id="female3" name="requisition1" value="female3">
+                                        <label for="female3">Handover</label><br>
+                                        <input type="radio" id="female4" name="requisition1" value="female4">
+                                        <label for="female4">Postponed</label><br>
+                                    </div>
+                                    <button class="btn btn-success" type="button" style="width: 30%; margin: 30px">Submit</button>
+                                </div>
+                                <!--                        </form>-->
+                                <!--                    </div>&lt;!&ndash;/card-block&ndash;&gt;-->
+                            </div>
+                            <!-- /form card login -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="text-center mt-3"> All Projects</h2>
+                <hr>
+                <div class="mt-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card ">
+                                <div class="card-header text-center bg-dark text-white">
+                                    <h4>Requisition Management system</h4>
+                                </div>
+                                <div class="card-body shadow p-3 bg-white rounded">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item"> Project Id : 2001</li>
+                                                <li class="list-group-item">Client Name : munna</li>
+                                                <li class="list-group-item">Requisition: Enable</li>
+                                                <li class="list-group-item">Assigned Department : Civil</li>
+                                                <li class="list-group-item">Assigned Team : A</li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                                <li class="list-group-item">Project Budget : 20,000</li>
+                                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                                <li class="list-group-item">Project Status : Running</li>
+
+                                            </ul>
+                                            <br>
+                                            <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="mt-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card ">
+                                <div class="card-header text-center bg-dark text-white">
+                                    <h4> Inventory Management system</h4>
+                                </div>
+                                <div class="card-body shadow p-3  bg-white rounded">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item"> Project Id : 2001</li>
+                                                <li class="list-group-item">Client Name : munna</li>
+                                                <li class="list-group-item">Requisition: Enable</li>
+                                                <li class="list-group-item">Assigned Department : Civil</li>
+                                                <li class="list-group-item">Assigned Team : A</li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                                <li class="list-group-item">Project Budget : 20,000</li>
+                                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                                <li class="list-group-item">Project Status : Running</li>
+
+                                            </ul>
+                                            <br>
+                                            <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card ">
+                                <div class="card-header text-center bg-dark text-white">
+                                    <h4> Forum Group system</h4>
+                                </div>
+                                <div class="card-body shadow p-3  bg-white rounded">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item"> Project Id : 2001</li>
+                                                <li class="list-group-item">Client Name : munna</li>
+                                                <li class="list-group-item">Requisition: Enable</li>
+                                                <li class="list-group-item">Assigned Department : Civil</li>
+                                                <li class="list-group-item">Assigned Team : A</li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                                <li class="list-group-item">Project Budget : 20,000</li>
+                                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                                <li class="list-group-item">Project Status : Running</li>
+
+                                            </ul>
+                                            <br>
+                                            <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card ">
+                                <div class="card-header text-center bg-dark text-white">
+                                    <h4> ERP system</h4>
+                                </div>
+                                <div class="card-body shadow p-3  bg-white rounded">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item"> Project Id : 2001</li>
+                                                <li class="list-group-item">Client Name : munna</li>
+                                                <li class="list-group-item">Requisition: Enable</li>
+                                                <li class="list-group-item">Assigned Department : Civil</li>
+                                                <li class="list-group-item">Assigned Team : A</li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Managerial Approval: Approved</li>
+                                                <li class="list-group-item"> Administrative Approval : Disapproved</li>
+                                                <li class="list-group-item"> Accounts Approval : Disapproved</li>
+                                                <li class="list-group-item">Project Budget : 20,000</li>
+                                                <li class="list-group-item">Start date : 20/08/2019</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <ul class="list-group list-group">
+                                                <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
+                                                <li class="list-group-item">Completion Date : 28/07/2020</li>
+                                                <li class="list-group-item">Project Status : Running</li>
+
+                                            </ul>
+                                            <br>
+                                            <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--        sayket card end-->
+
+
+        </div>
+
+
+        <!--Profile Modal-->
+        <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                <!--Content-->
+                <div class="modal-content">
+
+                    <!--Header-->
+                    <div class="modal-header">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+                        <button class="close" data-dismiss="modal">
+                       <i class="fas fa-times" style="font-size: 15px;"></i></button>
+                    </div>
+                    <!--Body-->
+
+                    <div class="modal-body text-center mb-1">
+                        <h3 style="color: palevioletred">Farhana Afreen</h3>
                         <hr>
-
-                        <div class="container">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input class="form-control" id="name" name="name" required="" type="text" style="width: 50%">
-                            </div>
-                            <div class="form-group">
-                                <label>Project ID</label>
-                                <input class="form-control" id="PI" name="gender" required="" type="number" style="width: 50%">
-                            </div>
-                            <div class="form-group">
-                                <label>Requisition Status</label> <br>
-                                <input type="radio" id="male" name="gender" value="male">
-                                <label for="male">Enable</label><br>
-                                <input type="radio" id="female" name="gender" value="female">
-                                <label for="female">Disable</label><br>
-                            </div>
-                            <div class="form-group">
-                                <label>Assigned Client</label> <br>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
-                                    <option value="A">Client A</option>
-                                    <option value="B">Client B</option>
-                                    <option value="W">Client C</option>
-                                    <option value="Y">Client D</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Assigned Department</label> <br>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
-                                    <option value="A">Department A</option>
-                                    <option value="B">Department B</option>
-                                    <option value="W">Department C</option>
-                                    <option value="Y">Department D</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Assigned Team</label> <br>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 50%">
-                                    <option value="A">Team A</option>
-                                    <option value="B">Team B</option>
-                                    <option value="W">Team C</option>
-                                    <option value="Y">Team D</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Managerial Approval</label> <br>
-                                <select name="cars" id="cars">
-                                    <option value="volvo">Approved</option>
-                                    <option value="saab">Disapproved</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Administrative Approval</label> <br>
-                                <select name="farhana" id="farhana">
-                                    <option value="volvo">Approved</option>
-                                    <option value="saab">Disapproved</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Accounts Approval</label> <br>
-                                <select name="afrin" id="afrin">
-                                    <option value="volvo">Approved</option>
-                                    <option value="saab">Disapproved</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Project Budget</label> <br>
-                                <input class="form-control" id="PB" name="budget" required="" type="number" step="0.01" style="width: 50%">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday">Start Date</label>
-                                <input type="date" id="birthday" name="birthday">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday2">Expected Completion Date</label>
-                                <input type="date" id="birthday2" name="birthday2">
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday3">Completion Date</label>
-                                <input type="date" id="birthday3" name="birthday3">
-                            </div>
-                            <div class="form-group">
-                                <label>Project Status</label> <br>
-                                <input type="radio" id="male1" name="requisition1" value="male1">
-                                <label for="male1">Pending</label><br>
-                                <input type="radio" id="female1" name="requisition1" value="female1">
-                                <label for="female1">Running</label><br>
-                                <input type="radio" id="female2" name="requisition1" value="female2">
-                                <label for="female2">Complete</label><br>
-                                <input type="radio" id="female3" name="requisition1" value="female3">
-                                <label for="female3">Handover</label><br>
-                                <input type="radio" id="female4" name="requisition1" value="female4">
-                                <label for="female4">Postponed</label><br>
-                            </div>
-                            <button class="btn btn-success" type="button" style="width: 30%; margin: 30px">Submit</button>
+                        <div class="md-form ml-0 mr-0">
+                            <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i> Profile
+                       </button>
                         </div>
-                        <!--                        </form>-->
-                        <!--                    </div>&lt;!&ndash;/card-block&ndash;&gt;-->
+                        <hr>
+                        <div class="text-center mt-1">
+                            <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
+                       </button>
+                        </div>
+                        <hr>
+                        <div class="text-center mt-1">
+                            <button class="btn btn-cyan mt-1"><i class="fas fa-power-off" style="margin-right: 5px"></i>Log Out
+                       </button>
+                        </div>
+
                     </div>
-                    <!-- /form card login -->
                 </div>
             </div>
         </div>
+        <!--Modal: Login with Avatar Form-->
+
+
+
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+        </script>
     </div>
-    <!--Edit button Modal End-->
-    <!--Edit button Modal End-->
-
-    <!-- site Management -->
-
-    <div class="container">
-        <h2 class="text-center mt-3"> All Projects</h2>
-        <hr>
-        <div class="mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card ">
-                        <div class="card-header text-center bg-dark text-white">
-                            <h4>Requisition Management system</h4>
-                        </div>
-                        <div class="card-body shadow p-3 bg-white rounded">
-                            <div class="row">
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item"> Project Id : 2001</li>
-                                        <li class="list-group-item">Client Name : munna</li>
-                                        <li class="list-group-item">Requisition: Enable</li>
-                                        <li class="list-group-item">Assigned Department : Civil</li>
-                                        <li class="list-group-item">Assigned Team : A</li>
-
-
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Managerial Approval: Approved</li>
-                                        <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                                        <li class="list-group-item"> Accounts Approval : Disapproved</li>
-                                        <li class="list-group-item">Project Budget : 20,000</li>
-                                        <li class="list-group-item">Start date : 20/08/2019</li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                                        <li class="list-group-item">Completion Date : 28/07/2020</li>
-                                        <li class="list-group-item">Project Status : Running</li>
-
-                                    </ul>
-                                    <br>
-                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
-                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card ">
-                        <div class="card-header text-center bg-dark text-white">
-                            <h4> Inventory Management system</h4>
-                        </div>
-                        <div class="card-body shadow p-3  bg-white rounded">
-                            <div class="row">
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item"> Project Id : 2001</li>
-                                        <li class="list-group-item">Client Name : munna</li>
-                                        <li class="list-group-item">Requisition: Enable</li>
-                                        <li class="list-group-item">Assigned Department : Civil</li>
-                                        <li class="list-group-item">Assigned Team : A</li>
-
-
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Managerial Approval: Approved</li>
-                                        <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                                        <li class="list-group-item"> Accounts Approval : Disapproved</li>
-                                        <li class="list-group-item">Project Budget : 20,000</li>
-                                        <li class="list-group-item">Start date : 20/08/2019</li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                                        <li class="list-group-item">Completion Date : 28/07/2020</li>
-                                        <li class="list-group-item">Project Status : Running</li>
-
-                                    </ul>
-                                    <br>
-                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
-                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card ">
-                        <div class="card-header text-center bg-dark text-white">
-                            <h4> Forum Group system</h4>
-                        </div>
-                        <div class="card-body shadow p-3  bg-white rounded">
-                            <div class="row">
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item"> Project Id : 2001</li>
-                                        <li class="list-group-item">Client Name : munna</li>
-                                        <li class="list-group-item">Requisition: Enable</li>
-                                        <li class="list-group-item">Assigned Department : Civil</li>
-                                        <li class="list-group-item">Assigned Team : A</li>
-
-
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Managerial Approval: Approved</li>
-                                        <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                                        <li class="list-group-item"> Accounts Approval : Disapproved</li>
-                                        <li class="list-group-item">Project Budget : 20,000</li>
-                                        <li class="list-group-item">Start date : 20/08/2019</li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                                        <li class="list-group-item">Completion Date : 28/07/2020</li>
-                                        <li class="list-group-item">Project Status : Running</li>
-
-                                    </ul>
-                                    <br>
-                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
-                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="mt-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card ">
-                        <div class="card-header text-center bg-dark text-white">
-                            <h4> ERP system</h4>
-                        </div>
-                        <div class="card-body shadow p-3  bg-white rounded">
-                            <div class="row">
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item"> Project Id : 2001</li>
-                                        <li class="list-group-item">Client Name : munna</li>
-                                        <li class="list-group-item">Requisition: Enable</li>
-                                        <li class="list-group-item">Assigned Department : Civil</li>
-                                        <li class="list-group-item">Assigned Team : A</li>
-
-
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Managerial Approval: Approved</li>
-                                        <li class="list-group-item"> Administrative Approval : Disapproved</li>
-                                        <li class="list-group-item"> Accounts Approval : Disapproved</li>
-                                        <li class="list-group-item">Project Budget : 20,000</li>
-                                        <li class="list-group-item">Start date : 20/08/2019</li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-4">
-                                    <ul class="list-group list-group">
-                                        <li class="list-group-item">Expected Completion Date : 15/07/2020</li>
-                                        <li class="list-group-item">Completion Date : 28/07/2020</li>
-                                        <li class="list-group-item">Project Status : Running</li>
-
-                                    </ul>
-                                    <br>
-                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
-                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-    </div>
-    <!--Bootstrap CDN-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-
-
-    <!-- for select2         -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-    <script type="text/javascript" src="js/myscript.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
