@@ -133,9 +133,9 @@
             </li>
             <li>
                 <ul> Site Management
-                <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
-                <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
-            </ul>
+                    <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
+                    <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
+                </ul>
             </li>
             <li>
                 <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisition Management </a>
@@ -155,15 +155,14 @@
                     <span class="anchor" id="formLogin"></span>
                     <!-- form card login -->
                     <div class="card card-outline-secondary shadow-lg">
-                         <ul>
-                        <li>
-                            <h1 class="text-center mb-3" style="padding: 20px">Edit Site</h1>
-                        </li>
-                        <li>
-                            <a href="site_management.html"
-                               style="color: black; font-size: 20px; margin-left: 600px;"> &times; </a>
-                        </li>
-                    </ul>
+                        <ul>
+                            <li>
+                                <h1 class="text-center mb-3" style="padding: 20px">Edit Site</h1>
+                            </li>
+                            <li>
+                                <a href="site_management.html" style="color: black; font-size: 20px; margin-left: 600px;"> &times; </a>
+                            </li>
+                        </ul>
                         <hr>
 
                         <div class="container">
@@ -235,168 +234,154 @@
     <div class="container">
         <h2 class="text-center mt-3"> All Sites</h2>
         <hr>
-        <div class="row mt-5">
-
-            <div class="card-deck">
-                <div class="scrollcard">
-                    <div class="card border-primary shadow-lg" style="width: 18rem;">
-                        <h3 class="card-header text-white bg-primary">Site 1
-
-                        </h3>
-                        <div class="card-body  bg-light scroll">
-
-                            <ul class="list-group list-group">
-                                <li class="list-group-item"> Project : Project01</li>
-                                <li class="list-group-item">Site Name: Site01</li>
-                                <li class="list-group-item">Site ID: 3001</li>
-                                <li class="list-group-item">Start date: 20/05/2019</li>
-                                <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
-                                <li class="list-group-item"> Completion Date: 15/09/2019</li>
-                                <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
-                                <li class="list-group-item">Handover Date: 23/09/2019</li>
-                                <li class="list-group-item">Site Description: lorem IPsom dolor</li>
-                                <li class="list-group-item">Site Status: Pending</li>
-
-                            </ul>
+        <div class="mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card ">
+                        <div class="card-header text-center bg-dark text-white">
+                            <h4> Site A</h4>
                         </div>
-                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
+                        <div class="card-body shadow p-3 bg-white rounded">
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item"> Project : Project01</li>
+                                        <li class="list-group-item">Site Name: Site A</li>
+                                        <li class="list-group-item">Site ID: 3001</li>
+                                        <li class="list-group-item">Start date: 20/05/2019</li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
+                                        <li class="list-group-item"> Completion Date: 15/09/2019</li>
+                                        <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
+                                        <li class="list-group-item">Handover Date: 23/09/2019</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item">Site Description: lorem IPsom dolor</li>
+                                        <li class="list-group-item">Site Status: Pending</li>
+
+                                    </ul>
+                                    <br>
+                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-
-                <div class="scrollcard">
-                    <div class="card border-primary shadow-lg" style="width: 18rem;">
-                        <h3 class="card-header text-white bg-primary">Site 2
-
-                        </h3>
-                        <div class="card-body  bg-light scroll">
-
-                            <ul class="list-group list-group">
-                                <li class="list-group-item"> Project : Project01</li>
-                                <li class="list-group-item">Site Name: Site01</li>
-                                <li class="list-group-item">Site ID: 3001</li>
-                                <li class="list-group-item">Start date: 20/05/2019</li>
-                                <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
-                                <li class="list-group-item"> Completion Date: 15/09/2019</li>
-                                <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
-                                <li class="list-group-item">Handover Date: 23/09/2019</li>
-                                <li class="list-group-item">Site Description: lorem IPsom dolor</li>
-                                <li class="list-group-item">Site Status: Pending</li>
-
-                            </ul>
-                        </div>
-                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                    </div>
-                </div>
-
-
-
-                <div class="scrollcard">
-                    <div class="card border-primary shadow-lg" style="width: 18rem;">
-                        <h3 class="card-header text-white bg-primary">Site 3
-
-                        </h3>
-                        <div class="card-body  bg-light scroll">
-
-                            <ul class="list-group list-group">
-                                <li class="list-group-item"> Project : Project01</li>
-                                <li class="list-group-item">Site Name: Site01</li>
-                                <li class="list-group-item">Site ID: 3001</li>
-                                <li class="list-group-item">Start date: 20/05/2019</li>
-                                <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
-                                <li class="list-group-item"> Completion Date: 15/09/2019</li>
-                                <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
-                                <li class="list-group-item">Handover Date: 23/09/2019</li>
-                                <li class="list-group-item">Site Description: lorem IPsom dolor</li>
-                                <li class="list-group-item">Site Status: Pending</li>
-
-                            </ul>
-                        </div>
-                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                    </div>
-                </div>
-
-
-
-                <div class="scrollcard">
-                    <div class="card border-primary shadow-lg" style="width: 18rem;">
-                        <h3 class="card-header text-white bg-primary">Site 4
-
-                        </h3>
-                        <div class="card-body  bg-light scroll">
-
-                            <ul class="list-group list-group">
-                                <li class="list-group-item"> Project : Project01</li>
-                                <li class="list-group-item">Site Name: Site01</li>
-                                <li class="list-group-item">Site ID: 3001</li>
-                                <li class="list-group-item">Start date: 20/05/2019</li>
-                                <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
-                                <li class="list-group-item"> Completion Date: 15/09/2019</li>
-                                <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
-                                <li class="list-group-item">Handover Date: 23/09/2019</li>
-                                <li class="list-group-item">Site Description: lorem IPsom dolor</li>
-                                <li class="list-group-item">Site Status: Pending</li>
-
-                            </ul>
-                        </div>
-                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                    </div>
-                </div>
-
-
-                <div class="scrollcard">
-                    <div class="card border-primary shadow-lg" style="width: 18rem;">
-                        <h3 class="card-header text-white bg-primary">Site 5
-
-                        </h3>
-                        <div class="card-body  bg-light scroll">
-
-                            <ul class="list-group list-group">
-                                <li class="list-group-item"> Project : Project01</li>
-                                <li class="list-group-item">Site Name: Site01</li>
-                                <li class="list-group-item">Site ID: 3001</li>
-                                <li class="list-group-item">Start date: 20/05/2019</li>
-                                <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
-                                <li class="list-group-item"> Completion Date: 15/09/2019</li>
-                                <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
-                                <li class="list-group-item">Handover Date: 23/09/2019</li>
-                                <li class="list-group-item">Site Description: lorem IPsom dolor</li>
-                                <li class="list-group-item">Site Status: Pending</li>
-
-                            </ul>
-                        </div>
-                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                    </div>
-                </div>
-
-
-
-                <div class="scrollcard">
-                    <div class="card border-primary shadow-lg" style="width: 18rem;">
-                        <h3 class="card-header text-white bg-primary">Site 6
-
-                        </h3>
-                        <div class="card-body  bg-light scroll">
-
-                            <ul class="list-group list-group">
-                                <li class="list-group-item"> Project : Project01</li>
-                                <li class="list-group-item">Site Name: Site01</li>
-                                <li class="list-group-item">Site ID: 3001</li>
-                                <li class="list-group-item">Start date: 20/05/2019</li>
-                                <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
-                                <li class="list-group-item"> Completion Date: 15/09/2019</li>
-                                <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
-                                <li class="list-group-item">Handover Date: 23/09/2019</li>
-                                <li class="list-group-item">Site Description: lorem IPsom dolor</li>
-                                <li class="list-group-item">Site Status: Pending</li>
-
-                            </ul>
-                        </div>
-                        <button data-toggle="modal" data-target="#modalAdd" class="btn btn-success">Edit</button>
-                    </div>
-                </div>
-
             </div>
+
+
+        </div>
+
+        <div class="mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card ">
+                        <div class="card-header text-center bg-dark text-white">
+                            <h4> Site B</h4>
+                        </div>
+                        <div class="card-body shadow p-3 bg-white rounded">
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item"> Project : Project01</li>
+                                        <li class="list-group-item">Site Name: Site A</li>
+                                        <li class="list-group-item">Site ID: 3001</li>
+                                        <li class="list-group-item">Start date: 20/05/2019</li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
+                                        <li class="list-group-item"> Completion Date: 15/09/2019</li>
+                                        <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
+                                        <li class="list-group-item">Handover Date: 23/09/2019</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item">Site Description: lorem IPsom dolor</li>
+                                        <li class="list-group-item">Site Status: Pending</li>
+
+                                    </ul>
+                                    <br>
+                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card ">
+                        <div class="card-header text-center bg-dark text-white">
+                            <h4> Site C</h4>
+                        </div>
+                        <div class="card-body shadow p-3 bg-white rounded">
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item"> Project : Project01</li>
+                                        <li class="list-group-item">Site Name: Site A</li>
+                                        <li class="list-group-item">Site ID: 3001</li>
+                                        <li class="list-group-item">Start date: 20/05/2019</li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item">Expected Completion Date: 08/09/2019</li>
+                                        <li class="list-group-item"> Completion Date: 15/09/2019</li>
+                                        <li class="list-group-item"> Expected Handover Date: 20/09/2019</li>
+                                        <li class="list-group-item">Handover Date: 23/09/2019</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-4">
+                                    <ul class="list-group list-group">
+                                        <li class="list-group-item">Site Description: lorem IPsom dolor</li>
+                                        <li class="list-group-item">Site Status: Pending</li>
+
+                                    </ul>
+                                    <br>
+                                    <button type="button" class="btn btn-success btn-sm">Edit </button>
+                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
     </div>
