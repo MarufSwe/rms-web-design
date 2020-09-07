@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Department Management
+		</title>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
+		</script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<div class="sidebar-header">
+					<h3>
+						<a href="index.html"> RMS </a>
+					</h3>
+				</div>
+				<ul class="list-unstyled components">
+					<li>
+						<a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client Management </a>
+					</li>
+					<li>
+						<a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Department Management </a>
+					</li>
+					<li>
+						<a href="team_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Team Management </a>
+					</li>
+					<li>
+						<a href="unit_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Unit Management </a>
+					</li>
+					<li>
+						<a href="requisitions_item_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Requisitions Item
+						Management </a>
+					</li>
+					<li>
+						<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Project
+						Management</a>
+						<ul class="collapse list-unstyled" id="pageSubmenu">
+							<li>
+								<a href="add_new_project.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Project </a>
+							</li>
+							<li>
+								<a href="project_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Projects</a>
+							</li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Site
+						Management</a>
+						<ul class="collapse list-unstyled" id="homeSubmenu">
+							<li>
+								<a href="add_new_site.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Site</a>
+							</li>
+							<li>
+								<a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Sites</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Requisition Management</a>
+						<ul class="collapse list-unstyled" id="homeSubmenuRequisition">
+							<li>
+								<a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a>
+							</li>
+							<li>
+								<a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- Page Content -->
+			<div id="content">
+				<!--Navbar Start-->
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="container-fluid">
+						<button type="button" id="sidebarCollapse" class="btn btn-default">
+							<i class="fas fa-bars">
+							</i>
+						</button>
+						<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="fas fa-align-justify">
+							</i>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="nav navbar-nav ml-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="#"> 
+									<i class="fa fa-bell-o" data-toggle="modal" data-target="#myModal"
+									style=" margin-right: 10px; font-size: 20px;"></i>
+									</a>
+									<div class="modal" id="myModal">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5>
+														Notifications
+													</h5>
+													<button class="close" data-dismiss="modal">
+														&times;
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+									<img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+									</a>
+								</li>
+								<!-- <li class="nav-item">-->
+								<!-- <a class="nav-link" href="#">Page</a>-->
+								<!-- </li>-->
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<!--Navbar End-->
+				<!--Profile Modal Start-->
+				<!--End Modal: Login with Avatar Form-->
+				<div class="layout_content">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+                            <div class="card table-card">
+									<div class="card-header">
+										<h3 class="float-left">
+											<i class="fa fa-info-circle">
+											</i>
+											Requisition Management system
+										</h3>
+										<div class="float-right">
+											<a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+											<a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+										</div>
+									</div>
+									<div class="card-body formarea filtercard table-responsive">
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td>
+														Project ID:
+														<span class="base-color">
+															1029
+														</span>
+													</td>
+													<td colspan="2">
+														Client Name :
+														<span class="base-color">
+															Munna
+														</span>
+													</td>
+													<td>
+														Assigned Department : Civil
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Jacob
+													</td>
+													<td>
+														Jacob
+													</td>
+													<td>
+														Thornton
+													</td>
+													<td>
+														@fat
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Jacob
+													</td>
+													<td colspan="2">
+														Larry the Bird
+													</td>
+													<td>
+														@twitter
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+                                <div class="card table-card">
+									<div class="card-header">
+										<h3 class="float-left">
+											<i class="fa fa-info-circle">
+											</i>
+											Requisition Management system
+										</h3>
+										<div class="float-right">
+											<a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+											<a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+										</div>
+									</div>
+									<div class="card-body formarea filtercard table-responsive">
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td>
+														Project ID:
+														<span class="base-color">
+															1029
+														</span>
+													</td>
+													<td colspan="2">
+														Client Name :
+														<span class="base-color">
+															Munna
+														</span>
+													</td>
+													<td>
+														Assigned Department : Civil
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Jacob
+													</td>
+													<td>
+														Jacob
+													</td>
+													<td>
+														Thornton
+													</td>
+													<td>
+														@fat
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Jacob
+													</td>
+													<td colspan="2">
+														Larry the Bird
+													</td>
+													<td>
+														@twitter
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="card table-card">
+									<div class="card-header">
+										<h3 class="float-left">
+											<i class="fa fa-info-circle">
+											</i>
+											Requisition Management system
+										</h3>
+										<div class="float-right">
+											<a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+											<a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+										</div>
+									</div>
+									<div class="card-body formarea filtercard table-responsive">
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td>
+														Project ID:
+														<span class="base-color">
+															1029
+														</span>
+													</td>
+													<td colspan="2">
+														Client Name :
+														<span class="base-color">
+															Munna
+														</span>
+													</td>
+													<td>
+														Assigned Department : Civil
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Jacob
+													</td>
+													<td>
+														Jacob
+													</td>
+													<td>
+														Thornton
+													</td>
+													<td>
+														@fat
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Jacob
+													</td>
+													<td colspan="2">
+														Larry the Bird
+													</td>
+													<td>
+														@twitter
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Sayket Client add code End-->
+			</div>
+		</div>
+		<!--Bootstrap CDN-->
+		<script src="https://code.jquery.com/jquery-3.5.1.js">
+		</script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+		</script>
+		<!-- for datatables -->
+		<!-- jQuery library -->
+		<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+		</script>
+		<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+		</script>
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+		</script>
+		<script type="text/javascript" src="js/myscript.js">
+		</script>
+		<script src="js/js.js">
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('#example').DataTable();
+
+				$('.select2').select2({
+					closeOnSelect: false
+				});
+			});
+		</script>
+	</body>
+
+</html>
