@@ -696,4 +696,49 @@ a.article:hover {
     border-left: none;
     border-radius: 0px 4px 4px 0px;
     }
+    .base-color{
+        color: #8bc34a;
+    }
+    .btn-del{
+        background: #feedef;
+        border: 1px solid #fdd1d6;
+        color: #ef2f45;
+    }
+     .btn-del:hover{
+        background: #fdd8ddb8;
+        border: 1px solid #fdd1d6;
+        color: #ef2f45;
+    }
+    .btn-edit{
+        background: #e8f5fd;
+        border: 1px solid #c0e6fd;
+        color: #0b9aec;
+    }
+     .btn-edit:hover{
+        background: #c0e6fd;
+        border: 1px solid #e8f5fd;
+        color: #0b9aec;
+    }
+    .mr10{
+        margin-right: 10px;
+    }
+    .mb0{
+        margin-bottom: 0;
+    }
+    .disapproved{
+       background: #feedef;
+border: 1px solid #fdd1d6;
+color: #ef2f45;
+font-size: 13px;
+padding: 3px 9px;
+border-radius: 3px;
+    }
+    .approved{
+       background: #f3faea;
+border: 1px solid #78ca23;
+color: #78ca23;
+font-size: 13px;
+padding: 3px 9px;
+border-radius: 3px;
+    }
   
