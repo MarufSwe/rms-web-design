@@ -769,9 +769,28 @@ font-size: 13px;
 padding: 3px 9px;
 border-radius: 3px;
     }
+.custom-ac{
+    margin-top: 15px;
+}
+.title-full{
+    width: 100%;
+    color: #000 !important;
+}
+.requsition_card{
+   border: 1px solid #8bc34a !important;
 
+}
 
+.table-card .customacc h3{
+    padding-top: 0 !important;
+}
+.customacc{
+    cursor: pointer;
 
+}
+.customacc:hover{
+    background: #8bc34a !important;
+}
     /*MEDIA  QUERY*/
 @media only screen and (max-width: 767px) {
    #sidebarCollapse {
