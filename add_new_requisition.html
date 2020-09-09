@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        Add newr Requisition
+        Add new Requisition
     </title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
@@ -73,7 +73,7 @@
                             <a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a>
                         </li>
                         <li>
-                            <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
+                            <a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
                         </li>
                     </ul>
                 </li>
@@ -193,6 +193,17 @@
                                     <div class="row">
                                         <div class="col-md-4 col-sm-6">
                                             <div class="form-group">
+                                                <label for="name">Project</label><br>
+                                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                <option value="volvo">Project A</option>
+                                                <option value="saab">Project B</option>
+                                                <option value="volvo">Project C</option>
+                                                <option value="saab">Project D</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
                                                 <label for="name">Site</label><br>
                                                 <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                 <option value="volvo">Site A</option>
@@ -202,28 +213,7 @@
                                             </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-sm-6">
-                                            <div class="form-group">
-                                                <label for="name">Submitted By</label><br>
-                                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                    <option value="volvo">Mr A</option>
-                                                    <option value="saab">Mr B</option>
-                                                    <option value="volvo">Mr C</option>
-                                                    <option value="saab">Mr D</option>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6">
-                                            <div class="form-group">
-                                                <label for="name">Prepared By</label><br>
-                                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                    <option value="volvo">Mr A</option>
-                                                    <option value="saab">Mr B</option>
-                                                    <option value="volvo">Mr C</option>
-                                                    <option value="saab">Mr D</option>
-                                                    </select>
-                                            </div>
-                                        </div>
+
                                         <div class="col-md-4 col-sm-6">
                                             <div class="form-group">
                                                 <label for="phone">
@@ -238,29 +228,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-sm-6">
-                                            <div class="form-group">
 
-                                                <label for="phone">
-                                                    Requisition type
-                                                </label>
-                                                <div class="area-ckeckbox-radio">
-                                                    <div class="radio radio-info radio-inline">
-                                                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
-                                                        <label for="inlineRadio1">
-                                                            Prerequisite
-                                                        </label>
-                                                    </div>
-                                                    <div class="radio radio-info radio-inline ml15">
-                                                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
-                                                        <label for="inlineRadio2">
-                                                            Post Requisition
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="form-group">
                                                 <label for="phone">
@@ -278,7 +246,7 @@
 
                                         <div class="col-md-4 col-sm-6">
                                             <div class="form-group">
-                                                <label for="name"> payment type</label><br>
+                                                <label for="name"> Payment type</label><br>
                                                 <select class="form-control select2 select2-hidden-accessible " style="width: 100%; " tabindex="-1 " aria-hidden="true">
                                                     <option value=" volvo "> Mobile banking</option>
                                                     <option value="saab ">check</option>
@@ -300,11 +268,40 @@
                                                 <input class="form-control " id="name1 " name="name1 " required=" " type="text " placeholder="Contact No">
                                             </div>
                                         </div>
+                                        <div class="col-md-4 co-sm-6">
+                                            <div class="form-group ">
+                                                <label>Purpose</label>
+                                                <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Purpose">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+
+                                                <label for="phone">
+                                                    Requisition type
+                                                </label>
+                                                <div class="area-ckeckbox-radio">
+                                                    <div class="radio radio-info radio-inline">
+                                                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                                                        <label for="inlineRadio1">
+                                                            Pre Requisition
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio radio-info radio-inline ml15">
+                                                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                                        <label for="inlineRadio2">
+                                                            Post Requisition
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
 
                                         <div class="col-md-12 ">
                                             <div class="form-group ">
                                                 <label for="comment ">Description</label>
-                                                <textarea class="form-control " rows="3 " id="comment "></textarea>
+                                                <textarea class="form-control " rows="3" id="comment "></textarea>
                                             </div>
                                         </div>
 
@@ -312,31 +309,36 @@
                                     </div>
                                     <div class="row ">
                                         <div class="col-md-4 ">
-
-                                            <div class="form-group ">
-                                                <label>Purpose</label>
-                                                <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Purpose">
+                                            <div class="form-group">
+                                                <label for="name">Submitted By</label><br>
+                                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option value="volvo">Mr A</option>
+                                                    <option value="saab">Mr B</option>
+                                                    <option value="volvo">Mr C</option>
+                                                    <option value="saab">Mr D</option>
+                                                    </select>
                                             </div>
+                                            <!--  -->
                                         </div>
                                         <div class="col-md-4 ">
-                                            <div class="form-group ">
-                                                <label>Proejct Name</label>
-                                                <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Proejct Name">
+                                            <div class="form-group">
+                                                <label for="name">Prepared By</label><br>
+                                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option value="volvo">Mr A</option>
+                                                    <option value="saab">Mr B</option>
+                                                    <option value="volvo">Mr C</option>
+                                                    <option value="saab">Mr D</option>
+                                                    </select>
                                             </div>
+                                            <!--  -->
 
                                         </div>
-                                        <div class="col-md-4 ">
-                                            <div class="form-group ">
-                                                <label>Requisition Cost</label>
-                                                <input class="form-control " id="name2 " name="name2 " required=" " type="number " placeholder="Requisition Cost">
-                                            </div>
 
-                                        </div>
 
 
 
                                         <div class="col-12 "><br>
-                                            <button class="btn btn-sm btn-info btn-base float-right ">
+                                            <button class="btn btn btn-info btn-base float-right ">
 													<i class="fa fa-save ">
 													</i>
 													Submit
