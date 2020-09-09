@@ -191,23 +191,6 @@ a.article:hover {
     background-color: white !important;
 }
 
-.edit-btn {
-<<<<<<< HEAD
-    color:#0171c4;
-=======
-    color: #0171c4;
->>>>>>> 4af152bf7006b3240622bc87e37fec67dc6e8510
-    font-size: 27px !important;
-}
-
-.delete-btn {
-    font-size: 25px !important;
-<<<<<<< HEAD
-=======
-    color: #ff4700;
-}
-
-
 /* ---------------------------------------------------
     drop dwon style by sayket
 ----------------------------------------------------- */
@@ -277,13 +260,6 @@ a.article:hover {
     @-o-keyframes
     #F1F4F6
 } */
-
-    font-size: 25px !important; 
->>>>>>> 4af152bf7006b3240622bc87e37fec67dc6e8510
-    color:#ff4700;
-}
-
-
 
 /*LoginPage Modal Start*/
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -369,4 +345,3 @@ span.psw {
 
 
 /*LoginPage Modal End*/
-
