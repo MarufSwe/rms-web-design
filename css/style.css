@@ -212,14 +212,39 @@ a.article:hover {
     background-color: white !important;
 }
 
-.edit-btn {
-    color: #0171c4;
-    font-size: 27px !important;
+.fa-edit.edit-btn {
+    background: #d7ecf9;
+    border: 1px solid #a8d8f4;
+    color: #0b9aec;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
 }
-
-.delete-btn {
-    font-size: 25px !important;
-    color: #ff4700;
+.fa-edit.edit-btn:hover{
+    background: #c0e6fd;
+    border: 1px solid #c0e6fd;
+    color: #0b9aec;
+}
+.fa-trash-o.delete-btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 3px;
+    font-size: 14px;
+    background: #feedef;
+    border: 1px solid #fdd1d6;
+    cursor: pointer;
+    color: #ef2f45;
+}
+.fa-trash-o.delete-btn:hover{
+    background: #fdd8ddb8;
+    border: 1px solid #fdd1d6;
+    color: #ef2f45;
 }
 
 
@@ -235,7 +260,7 @@ a.article:hover {
     background-color: #ffffff;
     width: 100%;
     min-width: 50px;
-    height: 35px;
+    height: 38px;
     min-height: 15px;
     box-shadow: none;
     -webkit-appearance: none;
@@ -409,6 +434,7 @@ a.article:hover {
    background:  #8bc34a !important;
     border-color:  #8bc34a !important;
     opacity: 1;
+    min-width: 90px;
 }
 .mb15{
     margin-bottom: 15px;
@@ -453,7 +479,9 @@ a.article:hover {
      height: 37px;
 }
 
-
+.select2-container--default .select2-selection--multiple{
+    border: 1px solid #ced4da !important;
+}
 
  .checkbox {
   padding-left: 20px; }
@@ -741,4 +769,25 @@ font-size: 13px;
 padding: 3px 9px;
 border-radius: 3px;
     }
-  
+
+
+
+    /*MEDIA  QUERY*/
+@media only screen and (max-width: 767px) {
+   #sidebarCollapse {
+        margin-left: 15px;
+    }
+    .btn-dark.d-inline-block.d-lg-none{
+        margin-right: 15px;
+    }
+    .nav.navbar-nav.ml-auto{
+        margin-top: 15px;
+    }
+ .nav.navbar-nav.ml-auto li{
+     border-top: 1px solid #cccccc3d;
+     background: #cccccc1c;
+     text-align: center;
+     padding: 5px;
+ }
+
+}
