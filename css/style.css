@@ -780,7 +780,36 @@ border-radius: 3px;
    border: 1px solid #8bc34a !important;
 
 }
-
+.pdb15{
+    padding-bottom: 15px;
+}
+.fl3{
+    margin-left: 3px;
+}
+.fr3{
+    margin-right: 3px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.extraform{
+    border: 1px solid #8bc34a70;
+    padding: 15px;
+    position: relative;
+}
+.extraform .delete-btn{
+    background: #feedef;
+    border: 1px solid #fdd1d6;
+    color: #ef2f45;
+    position: relative;
+    top: -15px;
+    right: -15px;
+    width: 34px;
+    border-radius: 0;
+}
+.repeater .filtercard.formarea{
+    padding-bottom: 0 !important;
+}
 .table-card .customacc h3{
     padding-top: 0 !important;
 }
