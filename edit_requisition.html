@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RMS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="navbar " style="display: flex; justify-content: flex-end">
+        <a href="index.html" style="text-decoration: none; color: #e1f5fe; margin-right: 90%"> Home </a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-bell-o" data-toggle="modal" data-target="#myModal" style="color: aliceblue; font-size: 20px; margin-top: 10px"></i>
+                </a>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Notifications</h5>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--Notification Modal-->
+
+
+    <!--Modal-->
+    <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+                    <button class="close" data-dismiss="modal">
+                    <i class="fas fa-times" style="font-size: 15px;"></i></button>
+                </div>
+                <!--Body-->
+
+                <div class="modal-body text-center mb-1">
+                    <h3 style="color: palevioletred">Farhana Afreen</h3>
+                    <hr>
+                    <div class="md-form ml-0 mr-0">
+                        <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i> Profile
+                    </button>
+                    </div>
+                    <hr>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
+                    </button>
+                    </div>
+                    <hr>
+                    <div class="text-center mt-1">
+                        <button class="btn btn-cyan mt-1"><i class="fas fa-power-off" style="margin-right: 5px"></i>Log Out
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal: Login with Avatar Form-->
+
+
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>
+                <a href="client management.html" style="text-decoration: none;"> Client Management </a>
+            </li>
+            <li>
+                <a href="department_management.html" style="text-decoration: none;"> Department Management </a>
+            </li>
+            <li>
+                <a href="team_management.html" style="text-decoration: none;"> Team Management </a>
+            </li>
+            <li>
+                <a href="unit_management.html" style="text-decoration: none;"> Unit Management </a>
+            </li>
+            <li>
+                <a href="requisitions_item_management.html" style="text-decoration: none;"> Requisitions Item
+                Management </a>
+            </li>
+            <li>
+                <ul> Project Management
+                    <li><a href="add_new_project.html" style="text-decoration: none;">Add New Project </a></li>
+                    <li><a href="project_management.html" style="text-decoration: none;"> View All Projects</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul> Site Management
+                    <li><a href="add_new_site.html" style="text-decoration: none;">Add New Site</a></li>
+                    <li><a href="site_management.html" style="text-decoration: none;"> View All Sites</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" style="text-decoration: none;"> Requisition Management </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="container py-3 ">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mb-3">Edit Requisition</h2>
+
+                <hr class="mb-4">
+                <div class="row justify-content-center ">
+                    <div class="col-md-8 ">
+                        <span class="anchor" id="formLogin"></span>
+                        <!-- form card login -->
+                        <div class="card card-outline-secondary shadow-lg">
+                            <!-- <div class="card-header"> -->
+                            <!-- <h5 class="mb-0">Fill The Form</h5> -->
+                            <!-- </div> -->
+                            <div class="card-body body">
+                                <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
+                                    <div class="form-group">
+                                        <label for="name">Site </label>
+                                        <select name="states[]" style="width: 50%">
+                                            <option value="A">Site 01</option>
+                                            <option value="B">Site02</option>
+                                            <option value="W">Site03</option>
+                                            <option value="Y">SIte04</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Submitted By</label>
+                                        <select name="states[]" style="width: 50%">
+                                            <option value="A">Rahim</option>
+                                            <option value="B">Karim</option>
+                                            <option value="W">jamal</option>
+                                            <option value="Y">kamal</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Prepared by </label>
+                                        <select name="states[]" style="width: 50%">
+                                            <option value="A">kasem</option>
+                                            <option value="B">khalil</option>
+                                            <option value="W">Amir</option>
+                                            
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="birthday">Working  Date</label>
+                                        <input type="date" id="birthday" name="birthday">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Requisition Type</label> <br>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Prerequisite</label><br>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Post Requisition</label><br>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="birthday">Payment   Date</label>
+                                        <input type="date" id="birthday" name="birthday">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label> Payment Type</label> <br>
+                                        <select name="states[]" style="width: 50%">
+                                            <option value="A">Mobile Banking</option>
+                                            <option value="B">Cheque</option>
+                                            <option value="W">Cash</option>
+                                            <option value="Y">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Payment Remarks </label>
+                                        <input class="form-control" id="name" name="name" required="" type="text" style="width: 50%">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Contact No</label> <br>
+                                        <input class="form-control" id="PB" name="budget" required="" type="number" style="width: 50%">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name">Description</label>
+                                        <input class="form-control" id="name" name="name" required="" type="textarea" style="width: 50%">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Purpose</label>
+                                        <input class="form-control" id="name" name="name" required="" type="textarea" style="width: 50%">
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label>Requisition</label> <br>
+                                        <select name="states[]" style="width: 50%">
+                                            <option value="A">Requisition A</option>
+                                            <option value="B">Requisition B</option>
+                                            <option value="W">Requisition C</option>
+                                            <option value="Y">Requisition D</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Item</label> <br>
+                                        <select name="states[]" style="width: 50%">
+                                            <option value="A">Item A</option>
+                                            <option value="B">Item B</option>
+                                            <option value="W">Item C</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Unit</label> <br>
+                                        <select name="cars" id="cars">
+                                            <option value="volvo">Kg</option>
+                                            <option value="saab">Litre</option>
+                                            <option value="saab">gm</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Quantity</label> <br>
+                                        <input class="form-control" id="PB" name="budget" required="" type="number" step="0.01" style="width: 50%">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Price Per Unit</label> <br>
+                                        <input class="form-control" id="PB" name="budget" required="" type="number" step="0.01" style="width: 50%">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Total Price</label> <br>
+                                        <input class="form-control" id="PB" name="budget" required="" type="number" step="0.01" style="width: 50%">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name">Remarks </label>
+                                        <input class="form-control" id="name" name="name" required="" type="text" style="width: 50%">
+                                    </div>
+                                    <button class="btn btn-success" type="button" style="width: 30%; margin: 30px">Submit</button>
+                            </div>
+
+                            <!--/card-block-->
+                        </div>
+                        <!-- /form card login -->
+                    </div>
+                </div>
+
+            </div>
+            <!--/col-->
+        </div>
+        <!--/row-->
+    </div>
+
+
+
+
+    <!--Bootstrap CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <!--Bootstrap CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
