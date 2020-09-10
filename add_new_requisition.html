@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Site
 						Management</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -350,7 +350,7 @@
                                 <div class="card table-card repeater pdb15">
                                     <div class="card-header">
                                         <h3 class="float-left">
-                                            Form Repeater
+                                            Select Requisition Item
                                         </h3>
 
                                     </div>
@@ -398,28 +398,38 @@
                                                             <input class="form-control" type="text" placeholder="Remarks"></div>
                                                         <!-- <textarea class="form-control " rows="2" placeholder="Remarks"></textarea> -->
                                                     </div>
-                                                    <div class="col-md-8">
-                                                        <div class="float-right text-muted" style="margin-top: 5px;">
-                                                            <h5>Grand Total</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" placeholder="Grand Total" disabled></div>
-                                                    </div>
+
 
                                                 </div>
+
                                             </div>
                                         </div>
 
                                     </div>
+                                    <div class="row" style="margin: 5px;">
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <div class="float-right text-muted mt-2">
+                                                <h5>Grand Total</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Grand Total" disabled></div>
+                                        </div>
+                                    </div>
 
                                     <div>
+
                                         <div class="col-md-12 ">
                                             <a href="#" id="addNewForm" class="btn btn-sm btn-info btn-base float-left fl3 mt15"><i
                                                     class="fa fa-plus-square-o"></i> &nbsp; ADD NEW</a>
 
-                                            <button class="btn btn-sm btn-info btn-base float-right mt15 fr3">Save Form Data</button>
+                                            <button class="btn btn-sm btn-info btn-base float-right mt15 fr3">Submit</button>
 
                                         </div>
 
@@ -430,80 +440,7 @@
 
                                     </div>
                                 </div>
-                                <!-- <div class="card table-card repeater pdb15">
-                                    <div class="card-header">
-                                        <h3 class="float-left">
-                                            Form Repeater
-                                        </h3>
 
-                                    </div>
-
-                                    <div class="allforms">
-                                        <div class="card-body formarea filtercard">
-                                            <div class="extraform">
-                                                <div class="row">
-                                                    <div class="col-md-12"> &nbsp;</div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-
-                                                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Item">
-                                                                <option value="volvo">Item A</option>
-                                                                <option value="saab">Item B</option>
-                                                                <option value="volvo">Item C</option>
-                                                                
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Item">
-                                                                <option value="volvo">Kg</option>
-                                                                <option value="saab">gm</option>
-                                                                <option value="volvo">Ltr</option>
-                                                                
-                                                                </select>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="col-md-2 ">
-                                                        <div class="form-group ">
-                                                            <input class="form-control " type="text " placeholder="Quantity "></div>
-                                                    </div>
-                                                    <div class="col-md-2 ">
-                                                        <div class="form-group ">
-                                                            <input class="form-control " type="text " placeholder="Price Per Unit "></div>
-                                                    </div>
-                                                    <div class="col-md-2 ">
-                                                        <div class="form-group ">
-                                                            <input class="form-control " type="text " placeholder="Total Price " disabled></div>
-                                                    </div>
-                                                    <div class="col-md-2 ">
-                                                        <div class="form-group ">
-                                                            <textarea class="form-control " rows="1 " placeholder="Remarks "></textarea>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div>
-                                            <div class="col-md-12">
-                                                <a href="#" id="addNewForm" class="btn btn-sm btn-info btn-base float-left fl3 mt15"><i
-                                                    class="fa fa-plus-square-o "></i> &nbsp; ADD NEW</a>
-
-                                                <button class="btn btn-sm btn-info btn-base float-right mt15 fr3 ">Save Form Data</button>
-
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                </div> -->
                             </div>
 
                         </div>
@@ -581,14 +518,7 @@
                     '                                               <div class="form-group">\n' +
                     '                                                   <input class="form-control" type="text[]" placeholder="Remarks"></div>\n' +
                     '                                           </div>\n' +
-                    '                                           <div class="col-md-8">\n' +
-                    '                                               <div class="float-right text-muted" style="margin-top: 5px;">\n' +
-                    '                                                   <h5>Grand Total</h5></div>\n' +
-                    '                                           </div>\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                   <input class="form-control" type="text" placeholder="Grand Total" disabled></div>\n' +
-                    '                                           </div>\n' +
+
                     '\n' +
                     '                                       </div>\n' +
                     '                                   </div>\n' +
