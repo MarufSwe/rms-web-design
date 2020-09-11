@@ -31,7 +31,7 @@
                 <li>
                     <a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Department Management </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="team_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Team Management </a>
                 </li>
                 <li>
@@ -112,10 +112,10 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="login_form.html">
-                                <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
-                            </a>
-                        </li>
+                                <a class="nav-link" href="login_form.html">
+                                    <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -173,10 +173,12 @@
                                     <div class="card table-card">
                                         <div class="card-header" id="headingOne">
                                             <h2 class="mb-0">
-                                                <h3 class="float-left"><i class="fa fa-info-circle"></i>Team management</h3>
-                                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-sm btn-info btn-base float-right"><i class="fa fa-plus-square-o"></i>&nbsp;
-                                                    Add New
-                                                </button>
+                                                <h3 class="float-left"><i id="addIcon" class="fa fa-chevron-circle-down" style="font:15px;"></i> Team management
+                                                </h3>
+                                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-sm btn-info btn-base float-right" onclick="change('addIcon')">
+                                                <i class="fa fa-plus-square-o"></i>&nbsp;
+                                                Add New
+                                            </button>
                                             </h2>
                                         </div>
 
@@ -645,7 +647,7 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>Team Name</th>
-                                                    <th>Selected Users</th>
+                                                    <th>Members</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -767,6 +769,15 @@
         $(document).ready(function() {
             $('.js-example-basic-multiple').select2();
         });
+    </script>
+    <script>
+        function change(iconID) {
+            if (document.getElementById(iconID).className == "fa fa-chevron-circle-up") {
+                document.getElementById(iconID).className = "fa fa-chevron-circle-down";
+            } else {
+                document.getElementById(iconID).className = "fa fa-chevron-circle-up";
+            }
+        }
     </script>
 </body>
 

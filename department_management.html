@@ -28,7 +28,7 @@
                     <a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client
                     Management </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i>
                     Department Management </a>
                 </li>
@@ -186,9 +186,9 @@
                                     <div class="card table-card">
                                         <div class="card-header" id="headingOne">
                                             <h2 class="mb-0">
-                                                <h3 class="float-left"><i class="fa fa-chevron-circle-down" style="font:15;px"></i> Department management
+                                                <h3 class="float-left"><i id="addIcon" class="fa fa-chevron-circle-down" style="font:15px;"></i> Department management
                                                 </h3>
-                                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-sm btn-info btn-base float-right">
+                                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-sm btn-info btn-base float-right" onclick="change('addIcon')">
                                                 <i class="fa fa-plus-square-o"></i>&nbsp;
                                                 Add New
                                             </button>
@@ -605,6 +605,16 @@
             $('#example').DataTable();
         });
     </script>
+    <!-- icon animationscript -->
+    <script>
+        function change(iconID) {
+            if (document.getElementById(iconID).className == "fa fa-chevron-circle-up") {
+                document.getElementById(iconID).className = "fa fa-chevron-circle-down";
+            } else {
+                document.getElementById(iconID).className = "fa fa-chevron-circle-up";
+            }
+        }
+    </script>
     <!-- <script>
     $('.select2').select2({
         closeOnSelect: false
@@ -612,18 +622,4 @@
 </script> -->
 </body>
 
-</html> });
-</script>
-< !-- < script>
-    $('.select2').select2({ closeOnSelect: false });
-    </script> -->
-    </body>
-
-    </html> });
-    </script>
-    < !-- < script>
-        $('.select2').select2({ closeOnSelect: false });
-        </script> -->
-        </body>
-
-        </html>
+</html>

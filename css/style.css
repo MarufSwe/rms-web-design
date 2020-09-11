@@ -371,9 +371,11 @@ a.article:hover {
     drop dwon style by sayket
 ----------------------------------------------------- */
 
-.card-header {
-    color: #007BFF;
-}
+
+/* .card-header {
+    background-color: #8BC34A;
+    color: white;
+} */
 
 .form-group select {
     background-color: #ffffff;
@@ -459,6 +461,7 @@ a.article:hover {
 
 .modal-login .form-control:focus {
     border-color: #70c5c0;
+    /* box-shadow: none; */
 }
 
 .modal-login .form-control,
@@ -1042,6 +1045,72 @@ a.article:hover {
 
 .customacc:hover {
     background: #8bc34a !important;
+}
+
+
+/* added by sayket */
+
+.login-card {
+    width: 420px;
+    min-width: 250px;
+    /* box-shadow: #555555; */
+}
+
+.login-card-header {
+    background-color: #8BC34A;
+    color: white;
+    border-radius: 25px 25px 0px 0px;
+    margin: 0;
+}
+
+.login-card .card-header h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 300px;
+}
+
+.login-card-card-body {
+    padding-top: 55px;
+    border-radius: 0px 0px 25px 25px;
+    height: 430px;
+}
+
+.login-card-card-body a {
+    color: #8BC34A;
+}
+
+.md-forms input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500px;
+    border-radius: 40px;
+    box-shadow: none;
+}
+
+.text-center .md-form {
+    box-shadow: none;
+}
+
+.text-center button {
+    border-radius: 40px;
+    background-color: #8BC34A;
+}
+
+.text-center button :hover {
+    background-color: #8BC34A;
+}
+
+.white-text button {
+    color: white;
+    font-size: 15px;
+}
+
+.white-text button::hover {
+    color: white;
+}
+
+.login-bg-color {
+    color: #808080;
 }
 
 
