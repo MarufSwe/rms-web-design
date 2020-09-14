@@ -6,7 +6,11 @@
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
-
+.form-control:focus{
+    border-color: #8bc34a !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
 body {
     /*font-family: 'Poppins', sans-serif;*/
     background: #fafafa;
@@ -1132,4 +1136,14 @@ a.article:hover {
         text-align: center;
         padding: 5px;
     }
+}
+.dropdown.bootstrap-select{
+    width: 100% !important;
+}
+.dropdown.bootstrap-select .dropdown-menu.show{
+    width: 320px !important;
+}
+.btn-light {
+    background-color: #fff;
+    border-color: #ccc;
 }

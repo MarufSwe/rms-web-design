@@ -8,7 +8,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"> 
 		</script>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
@@ -17,6 +18,8 @@
 	<body>
 		<div class="wrapper">
 			<!-- Sidebar -->
+
+
 			<nav id="sidebar">
 				<div class="sidebar-header">
 					<h3>
@@ -204,32 +207,16 @@
 											</div>
 											<div class="col-md-4 col-sm-6">
 												<div class="form-group">
-													<label for="amount">
-														Select 2:
+													<label class="title-full">
+														Multi select
 													</label>
-													<select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-														<option selected="selected">
-															Alabama
-														</option>
-														<option>
-															Alaska
-														</option>
-														<option>
-															California
-														</option>
-														<option>
-															Delaware
-														</option>
-														<option>
-															Tennessee
-														</option>
-														<option>
-															Texas
-														</option>
-														<option>
-															Washington
-														</option>
+
+													<select class="selectpicker" multiple data-live-search="true">
+														<option>Mustard</option>
+														<option>Ketchup</option>
+														<option>Relish</option>
 													</select>
+
 												</div>
 											</div>
 											<div class="col-md-4 col-sm-6">
@@ -452,32 +439,27 @@
 		</div>
 		<!--Bootstrap CDN-->
 		<script src="https://code.jquery.com/jquery-3.5.1.js">
-			 
+
 		</script>
 		<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-			 
-		</script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-			 
-		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"> 
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
 		</script>
 		<!-- for datatables -->
 		<!-- jQuery library -->
 		<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"> 
+		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
 		</script>
 		<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
-			  
+
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
 		</script>
 		<!-- Popper JS -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> 
-		</script>
+
 		<script type="text/javascript" src="js/myscript.js">
-			 
+
 		</script>
 		<script src="js/js.js">
 			 
@@ -490,8 +472,9 @@
 closeOnSelect: false
 });
     });
-     
+	$('select').selectpicker();
 		</script>
+
 	</body>
 
 </html>
