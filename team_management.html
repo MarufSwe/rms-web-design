@@ -3,15 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Team Management</title>
+    <title>
+        Team Management
+    </title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
-    <!-- selcect 2 -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -24,7 +27,9 @@
             </div>
 
             <ul class="list-unstyled components">
-
+                <li>
+                    <a href="user_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> User Management RBA </a>
+                </li>
                 <li>
                     <a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client Management </a>
                 </li>
@@ -64,7 +69,8 @@
                     <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Requisition Management</a>
                     <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
                         <li><a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a></li>
-                        <li><a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a></li>
+                        <li><a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a></li>
+                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
                     </ul>
                 </li>
             </ul>
@@ -90,7 +96,7 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <i class="fa fa-bell-o" data-toggle="modal" data-target="#myModal" style=""></i>
+                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal" style=""></i>
                                 </a>
 
                                 <div class="modal" id="myModal">
@@ -190,31 +196,59 @@
                                                     <div class="form-row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <label for="exampleInputEmail1"> Name</label>
+                                                                <label for="exampleInputEmail1"> Team Name</label>
                                                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label for="exampleInputEmail1">Members</label>
+                                                            <label class="title-full">
+                                                                Members
+                                                            </label>
                                                             <br>
-                                                            <select class="form-control js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 100%">
+                                                            <select class="selectpicker" multiple data-live-search="true">
                                                             <option value="Mu">Munna</option>
                                                             <option value="Ha">Hasan</option>
                                                             <option value="Km">kamrul</option>
                                                             <option value="Em">Emon</option>
                                                             <option value="Ra">Rasel</option>
-                                                        </select>
+                                                           </select>
+
 
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label for="exampleFormControlSelect1">Status</label>
-                                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                                    <option selected>Disable</option>
-                                                                    <option>Enable</option>
-                                                                    
-    
-                                                                </select>
+                                                                <div class="area-ckeckbox-radio">
+                                                                    <div class="checkbox checkbox-success checkbox-inline">
+                                                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label for="inlineCheckbox1">
+                                                                           Disable
+                                                                        </label>
+
+                                                                    </div>
+                                                                    <div class="checkbox checkbox-success checkbox-inline ml15">
+                                                                        <input type="checkbox" id="inlineCheckbox2" value="option1" checked="">
+                                                                        <label for="inlineCheckbox2">
+                                                                            Enable
+                                                                        </label>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- <div class="area-ckeckbox-radio">
+                                                                    <div class="checkbox checkbox-success">
+                                                                        <input id="checkbox3" type="checkbox">
+                                                                        <label for="checkbox3">
+                                                                            Disable
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="checkbox checkbox-success">
+                                                                        <input id="checkbox4" type="checkbox">
+                                                                        <label for="checkbox4">
+                                                                            Enable
+                                                                        </label>
+                                                                    </div>
+                                                                </div> -->
+
                                                             </div>
 
                                                         </div>
@@ -256,7 +290,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Team Name</th>
-                                                    <th>Members</th>
+
                                                     <th>Status</th>
                                                     <th width="80px">Action</th>
                                                 </tr>
@@ -265,7 +299,7 @@
 
                                                 <tr>
                                                     <td>Alpha</td>
-                                                    <td>Mr. Bear</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -280,7 +314,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Beta</td>
-                                                    <td>Mr. Tiger</td>
+
                                                     <td>Disable</td>
                                                     <td>
                                                         <div>
@@ -295,7 +329,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Gamma</td>
-                                                    <td>Mr. Fox</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -310,7 +344,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sigma</td>
-                                                    <td>Mr. Dog</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -325,7 +359,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Omega</td>
-                                                    <td>Mr. Cat</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -341,7 +375,7 @@
 
                                                 <tr>
                                                     <td>Alpha</td>
-                                                    <td>Mr. Bear</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -356,7 +390,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Beta</td>
-                                                    <td>Mr. Tiger</td>
+
                                                     <td>Disable</td>
                                                     <td>
                                                         <div>
@@ -371,7 +405,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Gamma</td>
-                                                    <td>Mr. Fox</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -386,7 +420,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sigma</td>
-                                                    <td>Mr. Dog</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -401,7 +435,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Omega</td>
-                                                    <td>Mr. Cat</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -417,7 +451,7 @@
 
                                                 <tr>
                                                     <td>Alpha</td>
-                                                    <td>Mr. Bear</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -432,7 +466,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Beta</td>
-                                                    <td>Mr. Tiger</td>
+
                                                     <td>Disable</td>
                                                     <td>
                                                         <div>
@@ -447,7 +481,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Gamma</td>
-                                                    <td>Mr. Fox</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -462,7 +496,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sigma</td>
-                                                    <td>Mr. Dog</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -477,7 +511,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Omega</td>
-                                                    <td>Mr. Cat</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -493,7 +527,7 @@
 
                                                 <tr>
                                                     <td>Alpha</td>
-                                                    <td>Mr. Bear</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -508,7 +542,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Beta</td>
-                                                    <td>Mr. Tiger</td>
+
                                                     <td>Disable</td>
                                                     <td>
                                                         <div>
@@ -523,7 +557,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Gamma</td>
-                                                    <td>Mr. Fox</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -538,7 +572,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sigma</td>
-                                                    <td>Mr. Dog</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -553,7 +587,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Omega</td>
-                                                    <td>Mr. Cat</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -569,7 +603,7 @@
 
                                                 <tr>
                                                     <td>Alpha</td>
-                                                    <td>Mr. Bear</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -584,7 +618,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Beta</td>
-                                                    <td>Mr. Tiger</td>
+
                                                     <td>Disable</td>
                                                     <td>
                                                         <div>
@@ -599,7 +633,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Gamma</td>
-                                                    <td>Mr. Fox</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -614,7 +648,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Sigma</td>
-                                                    <td>Mr. Dog</td>
+
                                                     <td>Active</td>
                                                     <td>
                                                         <div>
@@ -629,7 +663,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Omega</td>
-                                                    <td>Mr. Cat</td>
+
                                                     <td>Enable</td>
                                                     <td>
                                                         <div>
@@ -647,9 +681,9 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>Team Name</th>
-                                                    <th>Members</th>
+
                                                     <th>Status</th>
-                                                    <th>Action</th>
+                                                    <th width="80px">Action</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -696,12 +730,24 @@
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="exampleFormControlSelect1">Status</label>
-                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                        <div class="checkbox checkbox-success">
+                                                            <input id="checkbox3" type="checkbox">
+                                                            <label for="checkbox3">
+                                                                Disable
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox checkbox-success">
+                                                            <input id="checkbox4" type="checkbox">
+                                                            <label for="checkbox4">
+                                                                Enable
+                                                            </label>
+                                                        </div>
+                                                        <!-- <select class="form-control" id="exampleFormControlSelect1">
                                                             <option selected>Disable</option>
                                                             <option>Enable</option>
                                                             
 
-                                                        </select>
+                                                        </select> -->
                                                     </div>
 
                                                 </div>
@@ -730,45 +776,38 @@
         </div>
     </div>
 
-
-
-
-
-
-
     <!--Bootstrap CDN-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!-- for datatables         -->
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+    </script>
+    <!-- for datatables -->
     <!-- jQuery library -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+    </script>
     <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-    <script type="text/javascript" src="js/myscript.js"></script>
-
-
-    <script src="js/js.js"></script>
+    <script type="text/javascript" src="js/myscript.js">
+    </script>
+    <script src="js/js.js">
+    </script>
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
-
-    <script>
-        $(document).ready(function() {
-            $('.js-example-basic-multiple').select2();
+            $('.select2').select2({
+                closeOnSelect: true
+            });
         });
+        $('select').selectpicker();
     </script>
     <script>
         function change(iconID) {

@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
@@ -26,6 +27,9 @@
                 </h3>
             </div>
             <ul class="list-unstyled components">
+                <li>
+                    <a href="user_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> User Management RBA </a>
+                </li>
                 <li>
                     <a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client Management </a>
                 </li>
@@ -52,6 +56,7 @@
                         <li>
                             <a href="project_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Projects</a>
                         </li>
+                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
                     </ul>
                 </li>
                 <li>
@@ -73,8 +78,9 @@
                             <a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a>
                         </li>
                         <li>
-                            <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
+                            <a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
                         </li>
+                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
                     </ul>
                 </li>
             </ul>
@@ -96,7 +102,7 @@
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <i class="fa fa-bell-o" data-toggle="modal" data-target="#myModal" style=" margin-right: 10px; font-size: 20px;"></i>
+                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal" style=" margin-right: 10px; font-size: 20px;"></i>
                                 </a>
                                 <div class="modal" id="myModal">
                                     <div class="modal-dialog">
@@ -196,7 +202,7 @@
                                         <div class="col-md-4 col-sm-6">
                                             <div class="form-group">
                                                 <label for="name">Project</label>
-                                                <select class="form-control select2 select2-hidden-accessible" data-placeholder="Select Project" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                <select class="form-control" data-placeholder="Select Project" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                     <option value="volvo">Project A</option>
                                                         <option value="saab">Project B</option>
                                                         <option value="volvo">Project C</option>
@@ -294,7 +300,7 @@
                                         <div class="col-md-4 col-sm-6">
                                             <div class="form-group">
                                                 <label>Site Status</label> <br>
-                                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                     <option selected="selected">Pending</option>
                                                         <option value="saab">Running</option>
                                                         <option value="volvo">Complete</option>
@@ -348,10 +354,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js">
     </script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
     </script>
     <!-- for datatables -->
@@ -364,8 +368,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
     </script>
     <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
-    </script>
+
     <script type="text/javascript" src="js/myscript.js">
     </script>
     <script src="js/js.js">
@@ -375,14 +378,11 @@
             $('#example').DataTable();
 
             $('.select2').select2({
-                closeOnSelect: false
+                closeOnSelect: true
             });
         });
+        $('select').selectpicker();
     </script>
-</body>
-
-</html> }); });
-</script>
 </body>
 
 </html>
