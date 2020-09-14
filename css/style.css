@@ -1182,3 +1182,12 @@ a.article:hover {
 .forgot{
     font-size: 14px;
 }
+
+@media only screen and (max-width: 600px) {
+    .login-card{
+        margin: 30px auto;
+    }
+    .login-bg-color{
+        background-size: contain;
+    }
+}
