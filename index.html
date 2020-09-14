@@ -10,30 +10,24 @@
     <script src="js/jquery-3.4.1.min.js"></script>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
 
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-            crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
 
-<div class="wrapper">
-    <!-- Sidebar  -->
-     <nav id="sidebar">
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
             <div class="sidebar-header">
                 <h3><a href="index.html" style="color: white"> RMS </a></h3>
             </div>
@@ -86,11 +80,11 @@
         </nav>
 
 
-    <!-- Page Content  -->
-    <div id="content">
+        <!-- Page Content  -->
+        <div id="content">
 
-        <!--Navbar Start-->
-        <nav class="navbar navbar-expand-lg navbar-light" style="background: white">
+            <!--Navbar Start-->
+            <nav class="navbar navbar-expand-lg navbar-light" style="background: white">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-default">
@@ -106,7 +100,7 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal" style=""></i>
+                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal"></i>
                                 </a>
 
                                 <div class="modal" id="myModal">
@@ -128,108 +122,90 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="login_form.html">
-                                <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
-                            </a>
-                        </li>
+                                <a class="nav-link" href="login_form.html">
+                                    <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        <!--Navbar End-->
+            <!--Navbar End-->
 
-        <!--Profile Modal Start-->
-        <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-                <!--Content-->
-                <div class="modal-content">
+            <!--Profile Modal Start-->
+            <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
 
-                    <!--Header-->
-                    <div class="modal-header">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar"
-                             class="rounded-circle img-responsive">
-                        <button class="close" data-dismiss="modal">
+                        <!--Header-->
+                        <div class="modal-header">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+                            <button class="close" data-dismiss="modal">
                             <i class="fas fa-times" style="font-size: 15px;"></i></button>
-                    </div>
-                    <!--Body-->
+                        </div>
+                        <!--Body-->
 
-                    <div class="modal-body text-center mb-1">
-                        <h3 style="color: palevioletred">Farhana Afreen</h3>
-                        <hr>
-                        <div class="md-form ml-0 mr-0">
-                            <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i>
+                        <div class="modal-body text-center mb-1">
+                            <h3 style="color: palevioletred">Farhana Afreen</h3>
+                            <hr>
+                            <div class="md-form ml-0 mr-0">
+                                <button class="btn btn-cyan mt-1"><i class="fas fa-user" style="margin-right: 5px"></i>
                                 Profile
                             </button>
-                        </div>
-                        <hr>
-                        <div class="text-center mt-1">
-                            <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
+                            </div>
+                            <hr>
+                            <div class="text-center mt-1">
+                                <button class="btn btn-cyan mt-1"><i class="fas fa-cog" style="margin-right: 5px"></i>Setting
                             </button>
-                        </div>
-                        <hr>
-                        <div class="text-center mt-1">
-                            <button class="btn btn-cyan mt-1"><i class="fas fa-power-off"
-                                                                 style="margin-right: 5px"></i>Log Out
+                            </div>
+                            <hr>
+                            <div class="text-center mt-1">
+                                <button class="btn btn-cyan mt-1">
+                                    <i class="fas fa-power-off"style="margin-right: 5px"></i>Log Out
                             </button>
-                        </div>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--End Modal: Login with Avatar Form-->
+            <!--End Modal: Login with Avatar Form-->
 
-        <div class="text-content" style="padding: 20px">
-        <h2>Requisition Management System</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
+            <div class="text-content" style="padding: 20px">
+                <h2>Requisition Management System</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="line"></div>
+                <div class="line"></div>
 
-        <h2>What is RSM?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
+                <h2>What is RSM?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="line"></div>
+                <div class="line"></div>
             </div>
 
+        </div>
     </div>
-</div>
 
 
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
-

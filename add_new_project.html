@@ -180,7 +180,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="mb15">
-                                <a href="table.html" class="btn btn-sm btn-info btn-base float-right">
+                                <a href="#" class="btn btn-sm btn-info btn-base float-right">
                                     <i class="fa fa-list" aria-hidden="true"></i> &nbsp; Table List
                                 </a>
                             </div>
@@ -246,7 +246,17 @@
                                                 <label>
                                                     <label>Assigned Team</label>
                                                 </label>
-                                                <select class="form-control select2 select2-hidden-accessible" data-placeholder="Select Department" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                <!-- 
+                                                <select class="mdb-select md-form" multiple searchable="Search here..">
+                                                    <option value="" disabled selected>Choose your country</option>
+                                                    <option value="1">USA</option>
+                                                    <option value="2">Germany</option>
+                                                    <option value="3">France</option>
+                                                    <option value="3">Poland</option>
+                                                    <option value="3">Japan</option>
+                                                  </select>
+                                                <button class="btn-save btn btn-primary btn-sm">Save</button> -->
+                                                <select class="form-control select2 select2-hidden-accessible" data-placeholder="Select Department" multiple="" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                     <option value="A">Team A</option>
                                                     <option value="B">Team B</option>
                                                     <option value="W">Team C</option>
@@ -423,6 +433,9 @@
             });
         });
     </script>
+    <!-- <script>$(document).ready(function() {
+        $('.mdb-select').materialSelect();
+        });</script> -->
 </body>
 
 </html>
